@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80A253131A7C307000F2B992 /* PPNUIGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A253121A7C307000F2B992 /* PPNUIGenerator.swift */; };
+		80A253161A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */; };
+		80A253171A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */; };
+		80A253181A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A253151A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib */; };
+		80A253191A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A253151A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib */; };
+		80A2531B1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2531A1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift */; };
+		80A2531C1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2531A1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift */; };
+		80B166081A7C03030000EE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B166071A7C03030000EE25 /* AppDelegate.swift */; };
+		80B1660B1A7C03030000EE25 /* poopin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80B166091A7C03030000EE25 /* poopin.xcdatamodeld */; };
+		80B1660D1A7C03030000EE25 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1660C1A7C03030000EE25 /* SettingsViewController.swift */; };
+		80B166101A7C03030000EE25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B1660E1A7C03030000EE25 /* Main.storyboard */; };
+		80B166121A7C03030000EE25 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80B166111A7C03030000EE25 /* Images.xcassets */; };
+		80B166151A7C03030000EE25 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B166131A7C03030000EE25 /* LaunchScreen.xib */; };
+		80B166211A7C03030000EE25 /* poopinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B166201A7C03030000EE25 /* poopinTests.swift */; };
+		80B166311A7C0E3A0000EE25 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B166301A7C0E3A0000EE25 /* Account.swift */; };
+		80B166351A7C13D90000EE25 /* PPNRepositoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B166341A7C13D90000EE25 /* PPNRepositoryManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80B1661B1A7C03030000EE25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80B165FA1A7C03030000EE25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80B166011A7C03030000EE25;
+			remoteInfo = poopin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		80A253121A7C307000F2B992 /* PPNUIGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNUIGenerator.swift; sourceTree = "<group>"; };
+		80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNContinentSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		80A253151A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPNContinentSelectionTableViewCell.xib; sourceTree = "<group>"; };
+		80A2531A1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerTableViewDelegate.swift; sourceTree = "<group>"; };
+		80B166021A7C03030000EE25 /* poopin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poopin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B166061A7C03030000EE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80B166071A7C03030000EE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		80B1660A1A7C03030000EE25 /* poopin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = poopin.xcdatamodel; sourceTree = "<group>"; };
+		80B1660C1A7C03030000EE25 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		80B1660F1A7C03030000EE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		80B166111A7C03030000EE25 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		80B166141A7C03030000EE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		80B1661A1A7C03030000EE25 /* poopinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = poopinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B1661F1A7C03030000EE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80B166201A7C03030000EE25 /* poopinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poopinTests.swift; sourceTree = "<group>"; };
+		80B166301A7C0E3A0000EE25 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		80B166341A7C13D90000EE25 /* PPNRepositoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPNRepositoryManager.swift; path = poopin/PPNRepositoryManager.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80B165FF1A7C03030000EE25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80B166171A7C03030000EE25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80B165F91A7C03030000EE25 = {
+			isa = PBXGroup;
+			children = (
+				80B166041A7C03030000EE25 /* poopin */,
+				80B1661D1A7C03030000EE25 /* poopinTests */,
+				80B166031A7C03030000EE25 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80B166031A7C03030000EE25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80B166021A7C03030000EE25 /* poopin.app */,
+				80B1661A1A7C03030000EE25 /* poopinTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80B166041A7C03030000EE25 /* poopin */ = {
+			isa = PBXGroup;
+			children = (
+				80B166071A7C03030000EE25 /* AppDelegate.swift */,
+				80B1660C1A7C03030000EE25 /* SettingsViewController.swift */,
+				80B1660E1A7C03030000EE25 /* Main.storyboard */,
+				80B166111A7C03030000EE25 /* Images.xcassets */,
+				80B166131A7C03030000EE25 /* LaunchScreen.xib */,
+				80B166091A7C03030000EE25 /* poopin.xcdatamodeld */,
+				80B166301A7C0E3A0000EE25 /* Account.swift */,
+				80B166051A7C03030000EE25 /* Supporting Files */,
+				80B166341A7C13D90000EE25 /* PPNRepositoryManager.swift */,
+				80A253121A7C307000F2B992 /* PPNUIGenerator.swift */,
+				80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */,
+				80A253151A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib */,
+				80A2531A1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift */,
+			);
+			path = poopin;
+			sourceTree = "<group>";
+		};
+		80B166051A7C03030000EE25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80B166061A7C03030000EE25 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		80B1661D1A7C03030000EE25 /* poopinTests */ = {
+			isa = PBXGroup;
+			children = (
+				80B166201A7C03030000EE25 /* poopinTests.swift */,
+				80B1661E1A7C03030000EE25 /* Supporting Files */,
+			);
+			path = poopinTests;
+			sourceTree = "<group>";
+		};
+		80B1661E1A7C03030000EE25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80B1661F1A7C03030000EE25 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80B166011A7C03030000EE25 /* poopin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80B166241A7C03030000EE25 /* Build configuration list for PBXNativeTarget "poopin" */;
+			buildPhases = (
+				80B165FE1A7C03030000EE25 /* Sources */,
+				80B165FF1A7C03030000EE25 /* Frameworks */,
+				80B166001A7C03030000EE25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = poopin;
+			productName = poopin;
+			productReference = 80B166021A7C03030000EE25 /* poopin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		80B166191A7C03030000EE25 /* poopinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80B166271A7C03030000EE25 /* Build configuration list for PBXNativeTarget "poopinTests" */;
+			buildPhases = (
+				80B166161A7C03030000EE25 /* Sources */,
+				80B166171A7C03030000EE25 /* Frameworks */,
+				80B166181A7C03030000EE25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80B1661C1A7C03030000EE25 /* PBXTargetDependency */,
+			);
+			name = poopinTests;
+			productName = poopinTests;
+			productReference = 80B1661A1A7C03030000EE25 /* poopinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80B165FA1A7C03030000EE25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Lukas Ingelheim";
+				TargetAttributes = {
+					80B166011A7C03030000EE25 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					80B166191A7C03030000EE25 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 80B166011A7C03030000EE25;
+					};
+				};
+			};
+			buildConfigurationList = 80B165FD1A7C03030000EE25 /* Build configuration list for PBXProject "poopin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 80B165F91A7C03030000EE25;
+			productRefGroup = 80B166031A7C03030000EE25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80B166011A7C03030000EE25 /* poopin */,
+				80B166191A7C03030000EE25 /* poopinTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80B166001A7C03030000EE25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80A253181A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib in Resources */,
+				80B166101A7C03030000EE25 /* Main.storyboard in Resources */,
+				80B166151A7C03030000EE25 /* LaunchScreen.xib in Resources */,
+				80B166121A7C03030000EE25 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80B166181A7C03030000EE25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80A253191A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80B165FE1A7C03030000EE25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80B166311A7C0E3A0000EE25 /* Account.swift in Sources */,
+				80B1660D1A7C03030000EE25 /* SettingsViewController.swift in Sources */,
+				80B1660B1A7C03030000EE25 /* poopin.xcdatamodeld in Sources */,
+				80B166081A7C03030000EE25 /* AppDelegate.swift in Sources */,
+				80A253131A7C307000F2B992 /* PPNUIGenerator.swift in Sources */,
+				80B166351A7C13D90000EE25 /* PPNRepositoryManager.swift in Sources */,
+				80A253161A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift in Sources */,
+				80A2531B1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80B166161A7C03030000EE25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80A253171A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift in Sources */,
+				80B166211A7C03030000EE25 /* poopinTests.swift in Sources */,
+				80A2531C1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80B1661C1A7C03030000EE25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80B166011A7C03030000EE25 /* poopin */;
+			targetProxy = 80B1661B1A7C03030000EE25 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		80B1660E1A7C03030000EE25 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80B1660F1A7C03030000EE25 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		80B166131A7C03030000EE25 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80B166141A7C03030000EE25 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		80B166221A7C03030000EE25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		80B166231A7C03030000EE25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80B166251A7C03030000EE25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = poopin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		80B166261A7C03030000EE25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = poopin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		80B166281A7C03030000EE25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = poopinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/poopin.app/poopin";
+			};
+			name = Debug;
+		};
+		80B166291A7C03030000EE25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = poopinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/poopin.app/poopin";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80B165FD1A7C03030000EE25 /* Build configuration list for PBXProject "poopin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80B166221A7C03030000EE25 /* Debug */,
+				80B166231A7C03030000EE25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80B166241A7C03030000EE25 /* Build configuration list for PBXNativeTarget "poopin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80B166251A7C03030000EE25 /* Debug */,
+				80B166261A7C03030000EE25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80B166271A7C03030000EE25 /* Build configuration list for PBXNativeTarget "poopinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80B166281A7C03030000EE25 /* Debug */,
+				80B166291A7C03030000EE25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		80B166091A7C03030000EE25 /* poopin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				80B1660A1A7C03030000EE25 /* poopin.xcdatamodel */,
+			);
+			currentVersion = 80B1660A1A7C03030000EE25 /* poopin.xcdatamodel */;
+			path = poopin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 80B165FA1A7C03030000EE25 /* Project object */;
+}
