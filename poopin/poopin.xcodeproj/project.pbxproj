@@ -14,7 +14,7 @@
 		80A253181A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A253151A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib */; };
 		80A253191A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A253151A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib */; };
 		80A2531B1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2531A1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift */; };
-		80A2531C1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2531A1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift */; };
+		80A766221A7D1B8200F0672F /* PPNMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A766211A7D1B8200F0672F /* PPNMainMenuViewController.swift */; };
 		80B166081A7C03030000EE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B166071A7C03030000EE25 /* AppDelegate.swift */; };
 		80B1660B1A7C03030000EE25 /* poopin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80B166091A7C03030000EE25 /* poopin.xcdatamodeld */; };
 		80B1660D1A7C03030000EE25 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1660C1A7C03030000EE25 /* SettingsViewController.swift */; };
@@ -41,6 +41,7 @@
 		80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNContinentSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		80A253151A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPNContinentSelectionTableViewCell.xib; sourceTree = "<group>"; };
 		80A2531A1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerTableViewDelegate.swift; sourceTree = "<group>"; };
+		80A766211A7D1B8200F0672F /* PPNMainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNMainMenuViewController.swift; sourceTree = "<group>"; };
 		80B166021A7C03030000EE25 /* poopin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poopin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B166061A7C03030000EE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80B166071A7C03030000EE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 				80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */,
 				80A253151A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib */,
 				80A2531A1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift */,
+				80A766211A7D1B8200F0672F /* PPNMainMenuViewController.swift */,
 			);
 			path = poopin;
 			sourceTree = "<group>";
@@ -247,6 +249,7 @@
 				80B166351A7C13D90000EE25 /* PPNRepositoryManager.swift in Sources */,
 				80A253161A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift in Sources */,
 				80A2531B1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift in Sources */,
+				80A766221A7D1B8200F0672F /* PPNMainMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +260,6 @@
 				80A253171A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift in Sources */,
 				80B166211A7C03030000EE25 /* poopinTests.swift in Sources */,
 				805F72711A7C4EE100F5243A /* PPNUIGenerator.swift in Sources */,
-				80A2531C1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

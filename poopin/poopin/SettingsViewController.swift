@@ -1,34 +1,42 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+
     let tableViewDelegate = SettingsViewControllerTableViewDelegate()
-    var repositoryManager : PPNRepositoryManager?
+    let repositoryManager = PPNRepositoryManager.sharedInstance
+    let UIGenerator = PPNUIGenerator.sharedInstance
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
+        tableViewDelegate.currentContinent = repositoryManager.currentAccount?.continent as? Int
+        println(repositoryManager.currentAccount?.continent)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        repositoryManager = PPNRepositoryManager()
-        repositoryManager!.createAccount()
+        self.view.backgroundColor = UIColor(red: 0.02, green: 0.15, blue: 0.35, alpha: 1.0)
         createLogoView()
         createTableView()
-        
-        self.view.backgroundColor = UIColor(red: 0.05, green: 0.40, blue: 0.60, alpha: 1.0)
-        
-//        var button = UIButton()
-//        button.buttonType
-//        button.layer.borderColor = UIColor.redColor()
-        
-        
-//        self.view.addSubview(<#view: UIView#>)
+        createSaveButton()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    private func createSaveButton() {
+        var testB = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+        testB.frame = CGRectMake((self.view.frame.midX - 50.0), (self.view.frame.maxY - 45.0), 100.0, 35.0)
+        testB.backgroundColor = UIColor.clearColor()
+        testB.layer.cornerRadius = 5
+        testB.layer.borderWidth = 3
+        testB.layer.borderColor = UIColor.whiteColor().CGColor
+        testB.setTitle("Save", forState: UIControlState.Normal)
+        testB.addTarget(self, action: "saveContinent:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        self.view.addSubview(testB)
+
     }
     
     private func createTableView() {
@@ -43,6 +51,15 @@ class SettingsViewController: UIViewController {
     }
     
     private func createLogoView() {
-        self.view.addSubview(PPNUIGenerator.sharedInstance.logoView!)
+        UIGenerator.generateLogo(self, showSettings: false)
+        self.view.addSubview(UIGenerator.logoView!)
+    }
+    
+    func saveContinent(sender:UIButton!)
+    {
+        println("Button tapped")
+        repositoryManager.updateAccount(tableViewDelegate.currentContinent!)
+        performSegueWithIdentifier("saveSettings", sender: self)
+        
     }
 }

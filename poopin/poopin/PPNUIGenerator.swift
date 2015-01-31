@@ -21,7 +21,7 @@ class PPNUIGenerator {
     
     private let logoBackgroundSpec : [String: AnyObject] =
     [
-        "backgroundColor" : UIColor(red: 0.04, green: 0.32, blue: 0.52, alpha: 1.0)
+        "backgroundColor" : UIColor(red: 0.02, green: 0.15, blue: 0.35, alpha: 1.0)
         
     ]
     
@@ -58,13 +58,28 @@ class PPNUIGenerator {
         
         logoNavBarFrame = CGRect(x: 0.0, y: 0.0, width: maxY, height: sharedSpec["height"] as CGFloat)
         
-        sectionHeaderFrame = CGRect(x: 0.0, y: 100.0, width: maxY, height: 50.0)
+        sectionHeaderFrame = CGRect(x: 0.0, y: 100.0, width: maxY, height: 30.0)
     }
     
     private func generateLogo() {
+        generateLogo(UIViewController(), showSettings: false)
+    }
+    
+    func generateLogo(sendingController: UIViewController, showSettings: Bool) {
         generateFrame()
         logoView = generateLogoBackground()
         logoView?.addSubview(generateLogoText())
+        
+        if (showSettings) {
+            var testButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+            testButton.layer.borderWidth = 3
+            testButton.layer.borderColor = UIColor.whiteColor().CGColor
+            testButton.setTitle("Settings", forState: UIControlState.Normal)
+            testButton.frame = CGRectMake(10.0, 40.0, 80.0, 30.0)
+            testButton.addTarget(sendingController, action: "goToSettings:", forControlEvents: UIControlEvents.TouchUpInside)
+            
+            logoView?.addSubview(testButton)
+        }
     }
     
     private func generateLogoText() -> UIView {
@@ -88,9 +103,9 @@ class PPNUIGenerator {
         var logoText = UILabel(frame: sectionHeaderFrame!)
         logoText.text = name
         logoText.textAlignment = NSTextAlignment.Center
-        logoText.textColor = UIColor.whiteColor()
+        logoText.textColor = UIColor(red: 0.02, green: 0.15, blue: 0.35, alpha: 1.0)
         logoText.font = UIFont.boldSystemFontOfSize(20.0)
-        logoText.backgroundColor = (sectionHeaderSpec["backgroundColor"] as UIColor)
+        logoText.backgroundColor = UIColor.whiteColor()
         
         return logoText
     }

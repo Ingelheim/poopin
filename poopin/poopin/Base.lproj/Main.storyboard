@@ -2,12 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="cAO-fC-Qop">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Settings View Controller-->
         <scene sceneID="Our-B5-yqu">
             <objects>
-                <viewController id="cAO-fC-Qop" customClass="SettingsViewController" customModule="poopin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" id="cAO-fC-Qop" customClass="SettingsViewController" customModule="poopin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F8O-lA-7xg"/>
                         <viewControllerLayoutGuide type="bottom" id="tmo-dg-3jh"/>
@@ -17,10 +18,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="oHO-gr-5b8" kind="modal" identifier="saveSettings" id="zgl-gW-GmQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mi3-FJ-TvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597" y="277"/>
+            <point key="canvasLocation" x="241" y="231"/>
+        </scene>
+        <!--Main Menu View Controller-->
+        <scene sceneID="RyY-J5-GoY">
+            <objects>
+                <viewController storyboardIdentifier="PPNMainMenuViewController" id="oHO-gr-5b8" customClass="PPNMainMenuViewController" customModule="poopin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F0F-rk-uV3"/>
+                        <viewControllerLayoutGuide type="bottom" id="evf-65-dX3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jkr-qu-Ukz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Did you know text label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwF-nG-dhF">
+                                <rect key="frame" x="32" y="153" width="256" height="21"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="OwF-nG-dhF" secondAttribute="centerY" constant="120.5" id="B8Q-So-TyC"/>
+                            <constraint firstItem="OwF-nG-dhF" firstAttribute="leading" secondItem="Jkr-qu-Ukz" secondAttribute="leadingMargin" constant="16" id="Cau-6n-Y9L"/>
+                            <constraint firstAttribute="centerX" secondItem="OwF-nG-dhF" secondAttribute="centerX" id="Fkv-Fr-MYD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OwF-nG-dhF" secondAttribute="trailing" constant="16" id="Rs4-lw-epA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yfr-hc-Ezh"/>
+                    <connections>
+                        <outlet property="didYouKnowTextLabel" destination="OwF-nG-dhF" id="LaT-nb-952"/>
+                        <segue destination="cAO-fC-Qop" kind="modal" identifier="goToSettings" id="UZw-fr-mBp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wKD-SR-fHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="674" y="231"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

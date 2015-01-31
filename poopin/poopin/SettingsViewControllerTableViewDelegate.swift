@@ -1,6 +1,8 @@
 import UIKit
 
 class SettingsViewControllerTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
+    var repositoryManager: PPNRepositoryManager?
+    var currentContinent: Int?
     
     struct Section {
         var title : String
@@ -21,6 +23,11 @@ class SettingsViewControllerTableViewDelegate: NSObject, UITableViewDelegate, UI
     
     let sections = [Section(title: "Choose your continent")]
     
+    override init() {
+        repositoryManager = PPNRepositoryManager.sharedInstance
+        currentContinent = repositoryManager?.currentAccount?.continent as? Int
+    }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return sections.count
     }
@@ -30,9 +37,6 @@ class SettingsViewControllerTableViewDelegate: NSObject, UITableViewDelegate, UI
     }
     
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        
-        println("here")
-        
         var view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 400, height: 40.0))
         
         view.backgroundColor = UIColor.blackColor()
@@ -56,14 +60,25 @@ class SettingsViewControllerTableViewDelegate: NSObject, UITableViewDelegate, UI
         
         cell.textLabel?.text = continents[indexPath.row].name
         
-        if continents[indexPath.row].selected {
-            cell.selected = true
-        }
-        
         return cell
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (indexPath.row == currentContinent) {
+            cell.setSelected(true, animated: false)
+        }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var cell = tableView.cellForRowAtIndexPath(indexPath) as PPNContinentSelectionTableViewCell
+        currentContinent = indexPath.row
+        tableView.reloadData()
+    }
+    
+    func saveContinent(sender:UIButton!)
+    {
+        repositoryManager?.updateAccount(currentContinent!)
+        println("Button tappeddfdf")
+    
     }
 }
