@@ -1,11 +1,11 @@
 import UIKit
 import Foundation
 
-
 class PPNUIGenerator {
     var maxX : CGFloat = 0.0
     var maxY : CGFloat =  0.0
     var logoNavBarFrame : CGRect?
+    var sectionHeaderFrame : CGRect?
     
     let screenSize: CGRect = UIScreen.mainScreen().bounds
     
@@ -33,6 +33,12 @@ class PPNUIGenerator {
         
     ]
     
+    private let sectionHeaderSpec : [String: AnyObject] =
+    [
+        "backgroundColor" : UIColor(red: 0.02, green: 0.30, blue: 0.45, alpha: 1.0)
+        
+    ]
+    
     class var sharedInstance :PPNUIGenerator {
         struct Singleton {
             static let instance =
@@ -51,6 +57,8 @@ class PPNUIGenerator {
         maxY = CGFloat(screenSize.width)
         
         logoNavBarFrame = CGRect(x: 0.0, y: 0.0, width: maxY, height: sharedSpec["height"] as CGFloat)
+        
+        sectionHeaderFrame = CGRect(x: 0.0, y: 100.0, width: maxY, height: 50.0)
     }
     
     private func generateLogo() {
@@ -74,6 +82,17 @@ class PPNUIGenerator {
         logoBackground.backgroundColor = (logoBackgroundSpec["backgroundColor"] as UIColor)
         
         return logoBackground
+    }
+    
+    func sectionHeaderView(name: String) -> UIView {
+        var logoText = UILabel(frame: sectionHeaderFrame!)
+        logoText.text = name
+        logoText.textAlignment = NSTextAlignment.Center
+        logoText.textColor = UIColor.whiteColor()
+        logoText.font = UIFont.boldSystemFontOfSize(20.0)
+        logoText.backgroundColor = (sectionHeaderSpec["backgroundColor"] as UIColor)
+        
+        return logoText
     }
     
 }

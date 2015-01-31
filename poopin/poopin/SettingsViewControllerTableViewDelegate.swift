@@ -29,21 +29,41 @@ class SettingsViewControllerTableViewDelegate: NSObject, UITableViewDelegate, UI
         return continents.count
     }
     
+    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        
+        println("here")
+        
+        var view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 400, height: 40.0))
+        
+        view.backgroundColor = UIColor.blackColor()
+        return view
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 50.0
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30.0
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return PPNUIGenerator.sharedInstance.sectionHeaderView("Where you poopin from?")
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("continentCell", forIndexPath: indexPath) as UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("continentCell", forIndexPath: indexPath) as PPNContinentSelectionTableViewCell
+        
         cell.textLabel?.text = continents[indexPath.row].name
-        cell.textLabel?.textColor = UIColor.whiteColor()
-        cell.backgroundColor = UIColor(red: 0.04, green: 0.32, blue: 0.52, alpha: 1.0)
         
         if continents[indexPath.row].selected {
-            cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+            cell.selected = true
         }
         
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var cell = tableView.cellForRowAtIndexPath(indexPath)
-        cell?.accessoryType = UITableViewCellAccessoryType.Checkmark
+        var cell = tableView.cellForRowAtIndexPath(indexPath) as PPNContinentSelectionTableViewCell
     }
 }
