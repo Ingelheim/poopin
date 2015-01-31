@@ -13,11 +13,11 @@
 		80A253171A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */; };
 		80A253181A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A253151A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib */; };
 		80A253191A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A253151A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib */; };
-		80A2531B1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2531A1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift */; };
+		80A2531B1A7C3E7500F2B992 /* PPNSettingsViewControllerTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2531A1A7C3E7500F2B992 /* PPNSettingsViewControllerTableViewDelegate.swift */; };
 		80A766221A7D1B8200F0672F /* PPNMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A766211A7D1B8200F0672F /* PPNMainMenuViewController.swift */; };
 		80B166081A7C03030000EE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B166071A7C03030000EE25 /* AppDelegate.swift */; };
 		80B1660B1A7C03030000EE25 /* poopin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80B166091A7C03030000EE25 /* poopin.xcdatamodeld */; };
-		80B1660D1A7C03030000EE25 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1660C1A7C03030000EE25 /* SettingsViewController.swift */; };
+		80B1660D1A7C03030000EE25 /* PPNSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1660C1A7C03030000EE25 /* PPNSettingsViewController.swift */; };
 		80B166101A7C03030000EE25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B1660E1A7C03030000EE25 /* Main.storyboard */; };
 		80B166121A7C03030000EE25 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80B166111A7C03030000EE25 /* Images.xcassets */; };
 		80B166151A7C03030000EE25 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B166131A7C03030000EE25 /* LaunchScreen.xib */; };
@@ -40,13 +40,13 @@
 		80A253121A7C307000F2B992 /* PPNUIGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNUIGenerator.swift; sourceTree = "<group>"; };
 		80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNContinentSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		80A253151A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPNContinentSelectionTableViewCell.xib; sourceTree = "<group>"; };
-		80A2531A1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerTableViewDelegate.swift; sourceTree = "<group>"; };
+		80A2531A1A7C3E7500F2B992 /* PPNSettingsViewControllerTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNSettingsViewControllerTableViewDelegate.swift; sourceTree = "<group>"; };
 		80A766211A7D1B8200F0672F /* PPNMainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNMainMenuViewController.swift; sourceTree = "<group>"; };
 		80B166021A7C03030000EE25 /* poopin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poopin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B166061A7C03030000EE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80B166071A7C03030000EE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80B1660A1A7C03030000EE25 /* poopin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = poopin.xcdatamodel; sourceTree = "<group>"; };
-		80B1660C1A7C03030000EE25 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		80B1660C1A7C03030000EE25 /* PPNSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPNSettingsViewController.swift; sourceTree = "<group>"; };
 		80B1660F1A7C03030000EE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80B166111A7C03030000EE25 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		80B166141A7C03030000EE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -75,6 +75,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80A766241A7D42F400F0672F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				80A7662B1A7D438100F0672F /* Misc */,
+				80A766291A7D434400F0672F /* Classes */,
+				80A766281A7D433700F0672F /* Partials */,
+				80A766251A7D430200F0672F /* Delegates */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		80A766251A7D430200F0672F /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				80A2531A1A7C3E7500F2B992 /* PPNSettingsViewControllerTableViewDelegate.swift */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		80A766261A7D431000F0672F /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				80B166091A7C03030000EE25 /* poopin.xcdatamodeld */,
+				80B166341A7C13D90000EE25 /* PPNRepositoryManager.swift */,
+			);
+			name = Persistence;
+			sourceTree = "<group>";
+		};
+		80A766271A7D432700F0672F /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				80A253121A7C307000F2B992 /* PPNUIGenerator.swift */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		80A766281A7D433700F0672F /* Partials */ = {
+			isa = PBXGroup;
+			children = (
+				80A253151A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib */,
+			);
+			name = Partials;
+			sourceTree = "<group>";
+		};
+		80A766291A7D434400F0672F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				80B1660C1A7C03030000EE25 /* PPNSettingsViewController.swift */,
+				80A766211A7D1B8200F0672F /* PPNMainMenuViewController.swift */,
+				80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		80A7662A1A7D436800F0672F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				80B166301A7C0E3A0000EE25 /* Account.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		80A7662B1A7D438100F0672F /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				80B166131A7C03030000EE25 /* LaunchScreen.xib */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
 		80B165F91A7C03030000EE25 = {
 			isa = PBXGroup;
 			children = (
@@ -96,20 +166,13 @@
 		80B166041A7C03030000EE25 /* poopin */ = {
 			isa = PBXGroup;
 			children = (
+				80A7662A1A7D436800F0672F /* Models */,
+				80A766271A7D432700F0672F /* Lib */,
+				80A766261A7D431000F0672F /* Persistence */,
+				80A766241A7D42F400F0672F /* Views */,
 				80B166071A7C03030000EE25 /* AppDelegate.swift */,
-				80B1660C1A7C03030000EE25 /* SettingsViewController.swift */,
 				80B1660E1A7C03030000EE25 /* Main.storyboard */,
-				80B166111A7C03030000EE25 /* Images.xcassets */,
-				80B166131A7C03030000EE25 /* LaunchScreen.xib */,
-				80B166091A7C03030000EE25 /* poopin.xcdatamodeld */,
-				80B166301A7C0E3A0000EE25 /* Account.swift */,
 				80B166051A7C03030000EE25 /* Supporting Files */,
-				80B166341A7C13D90000EE25 /* PPNRepositoryManager.swift */,
-				80A253121A7C307000F2B992 /* PPNUIGenerator.swift */,
-				80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */,
-				80A253151A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib */,
-				80A2531A1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift */,
-				80A766211A7D1B8200F0672F /* PPNMainMenuViewController.swift */,
 			);
 			path = poopin;
 			sourceTree = "<group>";
@@ -117,6 +180,7 @@
 		80B166051A7C03030000EE25 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				80B166111A7C03030000EE25 /* Images.xcassets */,
 				80B166061A7C03030000EE25 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -242,13 +306,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				80B166311A7C0E3A0000EE25 /* Account.swift in Sources */,
-				80B1660D1A7C03030000EE25 /* SettingsViewController.swift in Sources */,
+				80B1660D1A7C03030000EE25 /* PPNSettingsViewController.swift in Sources */,
 				80B1660B1A7C03030000EE25 /* poopin.xcdatamodeld in Sources */,
 				80B166081A7C03030000EE25 /* AppDelegate.swift in Sources */,
 				80A253131A7C307000F2B992 /* PPNUIGenerator.swift in Sources */,
 				80B166351A7C13D90000EE25 /* PPNRepositoryManager.swift in Sources */,
 				80A253161A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift in Sources */,
-				80A2531B1A7C3E7500F2B992 /* SettingsViewControllerTableViewDelegate.swift in Sources */,
+				80A2531B1A7C3E7500F2B992 /* PPNSettingsViewControllerTableViewDelegate.swift in Sources */,
 				80A766221A7D1B8200F0672F /* PPNMainMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
