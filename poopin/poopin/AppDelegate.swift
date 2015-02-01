@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        var initialViewController = storyboard.instantiateViewControllerWithIdentifier("PPNMainMenuViewController") as UIViewController
+        var initialViewController = storyboard.instantiateViewControllerWithIdentifier("SocketExample") as UIViewController
         
         if  sharedRepoManager.firstVisit {
             initialViewController = storyboard.instantiateViewControllerWithIdentifier("SettingsViewController") as UIViewController

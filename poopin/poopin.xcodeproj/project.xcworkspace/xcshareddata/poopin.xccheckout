@@ -12,6 +12,8 @@
 	<dict>
 		<key>811480E02E9BB0B507B625D3794313D151937353</key>
 		<string>https://github.com/Ingelheim/poopin.git</string>
+		<key>ABB939127996C66F7E852A780552ADEEF03C6B13</key>
+		<string>github.com:square/SocketRocket.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>poopin/poopin.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>811480E02E9BB0B507B625D3794313D151937353</key>
 		<string>../../..</string>
+		<key>ABB939127996C66F7E852A780552ADEEF03C6B13</key>
+		<string>../../../../SocketRocket</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/Ingelheim/poopin.git</string>
@@ -35,6 +39,14 @@
 			<string>811480E02E9BB0B507B625D3794313D151937353</string>
 			<key>IDESourceControlWCCName</key>
 			<string>poopin</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>ABB939127996C66F7E852A780552ADEEF03C6B13</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SocketRocket</string>
 		</dict>
 	</array>
 </dict>

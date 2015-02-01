@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8007E4171A7E57F000DDA472 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8007E4161A7E57F000DDA472 /* Foundation.framework */; };
+		8007E4191A7E57F600DDA472 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8007E4181A7E57F600DDA472 /* Security.framework */; };
+		8007E41B1A7E57FD00DDA472 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8007E41A1A7E57FD00DDA472 /* CFNetwork.framework */; };
+		8007E41D1A7E580300DDA472 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8007E41C1A7E580300DDA472 /* libicucore.dylib */; };
+		8007E41F1A7E595000DDA472 /* SocketExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8007E41E1A7E595000DDA472 /* SocketExampleViewController.swift */; };
 		805F72711A7C4EE100F5243A /* PPNUIGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A253121A7C307000F2B992 /* PPNUIGenerator.swift */; };
 		80A253131A7C307000F2B992 /* PPNUIGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A253121A7C307000F2B992 /* PPNUIGenerator.swift */; };
 		80A253161A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */; };
@@ -16,6 +21,7 @@
 		80A2531B1A7C3E7500F2B992 /* PPNSettingsViewControllerTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2531A1A7C3E7500F2B992 /* PPNSettingsViewControllerTableViewDelegate.swift */; };
 		80A766221A7D1B8200F0672F /* PPNMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A766211A7D1B8200F0672F /* PPNMainMenuViewController.swift */; };
 		80A7662D1A7D449400F0672F /* PPNPoopinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A7662C1A7D449400F0672F /* PPNPoopinViewController.swift */; };
+		80A85DA61A7E563B002C8951 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A85DA51A7E563B002C8951 /* SRWebSocket.m */; };
 		80B166081A7C03030000EE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B166071A7C03030000EE25 /* AppDelegate.swift */; };
 		80B1660B1A7C03030000EE25 /* poopin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80B166091A7C03030000EE25 /* poopin.xcdatamodeld */; };
 		80B1660D1A7C03030000EE25 /* PPNSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1660C1A7C03030000EE25 /* PPNSettingsViewController.swift */; };
@@ -38,12 +44,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8007E4161A7E57F000DDA472 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8007E4181A7E57F600DDA472 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8007E41A1A7E57FD00DDA472 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		8007E41C1A7E580300DDA472 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		8007E41E1A7E595000DDA472 /* SocketExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketExampleViewController.swift; sourceTree = "<group>"; };
 		80A253121A7C307000F2B992 /* PPNUIGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNUIGenerator.swift; sourceTree = "<group>"; };
 		80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNContinentSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		80A253151A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPNContinentSelectionTableViewCell.xib; sourceTree = "<group>"; };
 		80A2531A1A7C3E7500F2B992 /* PPNSettingsViewControllerTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNSettingsViewControllerTableViewDelegate.swift; sourceTree = "<group>"; };
 		80A766211A7D1B8200F0672F /* PPNMainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNMainMenuViewController.swift; sourceTree = "<group>"; };
 		80A7662C1A7D449400F0672F /* PPNPoopinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNPoopinViewController.swift; sourceTree = "<group>"; };
+		80A85DA21A7E563A002C8951 /* poopin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "poopin-Bridging-Header.h"; sourceTree = "<group>"; };
+		80A85DA31A7E563B002C8951 /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
+		80A85DA41A7E563B002C8951 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		80A85DA51A7E563B002C8951 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
 		80B166021A7C03030000EE25 /* poopin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poopin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B166061A7C03030000EE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80B166071A7C03030000EE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +79,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8007E41D1A7E580300DDA472 /* libicucore.dylib in Frameworks */,
+				8007E41B1A7E57FD00DDA472 /* CFNetwork.framework in Frameworks */,
+				8007E4191A7E57F600DDA472 /* Security.framework in Frameworks */,
+				8007E4171A7E57F000DDA472 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +147,7 @@
 				80A766211A7D1B8200F0672F /* PPNMainMenuViewController.swift */,
 				80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */,
 				80A7662C1A7D449400F0672F /* PPNPoopinViewController.swift */,
+				8007E41E1A7E595000DDA472 /* SocketExampleViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -148,9 +168,24 @@
 			name = Misc;
 			sourceTree = "<group>";
 		};
+		80A85DA11A7E5624002C8951 /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				80A85DA31A7E563B002C8951 /* SocketRocket-Prefix.pch */,
+				80A85DA41A7E563B002C8951 /* SRWebSocket.h */,
+				80A85DA51A7E563B002C8951 /* SRWebSocket.m */,
+				80A85DA21A7E563A002C8951 /* poopin-Bridging-Header.h */,
+			);
+			name = SocketRocket;
+			sourceTree = "<group>";
+		};
 		80B165F91A7C03030000EE25 = {
 			isa = PBXGroup;
 			children = (
+				8007E41C1A7E580300DDA472 /* libicucore.dylib */,
+				8007E41A1A7E57FD00DDA472 /* CFNetwork.framework */,
+				8007E4181A7E57F600DDA472 /* Security.framework */,
+				8007E4161A7E57F000DDA472 /* Foundation.framework */,
 				80B166041A7C03030000EE25 /* poopin */,
 				80B1661D1A7C03030000EE25 /* poopinTests */,
 				80B166031A7C03030000EE25 /* Products */,
@@ -169,6 +204,7 @@
 		80B166041A7C03030000EE25 /* poopin */ = {
 			isa = PBXGroup;
 			children = (
+				80A85DA11A7E5624002C8951 /* SocketRocket */,
 				80A7662A1A7D436800F0672F /* Models */,
 				80A766271A7D432700F0672F /* Lib */,
 				80A766261A7D431000F0672F /* Persistence */,
@@ -308,11 +344,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8007E41F1A7E595000DDA472 /* SocketExampleViewController.swift in Sources */,
 				80B166311A7C0E3A0000EE25 /* Account.swift in Sources */,
 				80B1660D1A7C03030000EE25 /* PPNSettingsViewController.swift in Sources */,
 				80B1660B1A7C03030000EE25 /* poopin.xcdatamodeld in Sources */,
 				80B166081A7C03030000EE25 /* AppDelegate.swift in Sources */,
 				80A253131A7C307000F2B992 /* PPNUIGenerator.swift in Sources */,
+				80A85DA61A7E563B002C8951 /* SRWebSocket.m in Sources */,
 				80B166351A7C13D90000EE25 /* PPNRepositoryManager.swift in Sources */,
 				80A253161A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift in Sources */,
 				80A2531B1A7C3E7500F2B992 /* PPNSettingsViewControllerTableViewDelegate.swift in Sources */,
@@ -442,9 +480,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = poopin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "poopin/poopin-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -452,9 +493,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = poopin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "poopin/poopin-Bridging-Header.h";
 			};
 			name = Release;
 		};
