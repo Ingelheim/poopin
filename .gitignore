@@ -1,2 +1,2 @@
-poopinAPIServer/node_modules/*
-.idea
+/poopinAPIServer/node_modules
+/poopinAPIServer/.idea
