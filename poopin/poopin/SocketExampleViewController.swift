@@ -21,13 +21,18 @@ class SocketExample: UIViewController {
         
         socket.on("connect") {data in
             println("socket connected")
+            self.sendInitialMessage()
         }
         
-        socket.on("sendData") {data in
+        socket.on("updatePoopinStats") {data in
             if let reason = data as? NSDictionary {
-                println("Data received")
-                self.label!.text = reason["test"] as? String
+                println("Data received \(reason)")
+//                self.label!.text = reason["test"] as? String
             }
         }
+    }
+    
+    func sendInitialMessage() {
+        socket.emit("initialConnection")
     }
 }

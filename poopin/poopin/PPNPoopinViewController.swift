@@ -139,6 +139,7 @@ class PPNContinentStatsCell {
 class PPNPoopinViewController : UIViewController {
     var startingOffset : Float = 210.0
     let mainOffset : Float = 210.0
+    let socket = SocketIOClient(socketURL: "http://localhost:8080")
     
     var continentCells = [
         "Europe" : PPNContinentStatsCell(continentName: "Europe", initialValue: 200, cellOffset: 210.0),
@@ -185,6 +186,7 @@ class PPNPoopinViewController : UIViewController {
         super.viewWillAppear(animated)
         startingOffset = mainOffset
         println(startingOffset)
+        startAndRegisterSocket()
     }
     
     override func viewDidLoad() {
@@ -202,7 +204,7 @@ class PPNPoopinViewController : UIViewController {
         createSettingsButton()
         
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true);
+//        var timer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true);
         
         var watchTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true);
     }
@@ -230,13 +232,24 @@ class PPNPoopinViewController : UIViewController {
         return "\(minutesString):\(secondsString)"
     }
     
-    func update() {
+//    
+    
+    func update(newStats: Dictionary<String, Int>) {
+//        var liveStats = newStats as Dictionary<String, AnyObject>
+        
+        
+        
         for (name, continentCell) in continentCells as [String: PPNContinentStatsCell] {
             //            createContinentCell(continent as String, poopValue: poopValue as Int)
-            var randomInt = Int(arc4random_uniform(UInt32(4000))) + 1
-            continentCell.updateValuesAndReturnNewCell(randomInt)
+//            var randomInt = Int(arc4random_uniform(UInt32(4000))) + 1
+            
+//            var number = Int(liveStats["continents"]![name]!)
+            
+//            println(newStats.objectForKey(name))
+            continentCell.updateValuesAndReturnNewCell(newStats[name]!)
             //            self.view.addSubview(continentCell.wholeCell!)
         }
+        println(liveStats)
     }
     
     private func createLogoView() {
@@ -299,5 +312,39 @@ class PPNPoopinViewController : UIViewController {
             continentCell.updateValuesAndReturnNewCell(100)
 //            self.view.addSubview(continentCell.wholeCell!)
         }
+    }
+    
+    func startAndRegisterSocket() {
+        socket.connect()
+        
+        socket.on("connect") {data in
+            println("socket connected")
+            self.sendInitialMessage()
+        }
+        
+        socket.on("updatePoopinStats") {data in
+            println("CALLED")
+            
+//            var jerror = NSError()
+            
+//            let jsonDic = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &jerror) as Dictionary<String, AnyObject>
+            if let reason = data as? Dictionary<String, AnyObject> {
+                
+//                println("Data received \(reason)")
+                
+                if let continents = reason["continents"] as? Dictionary<String, Int> {
+                  println("CONTINENTS \(continents)")
+                    self.update(continents)
+                }
+////                var dic = reason as [String:String]
+//                self.update(reason)
+//
+//                //                self.label!.text = reason["test"] as? String
+            }
+        }
+    }
+    
+    func sendInitialMessage() {
+        socket.emit("initialConnection")
     }
 }
