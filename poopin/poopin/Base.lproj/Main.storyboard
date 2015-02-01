@@ -57,11 +57,30 @@
                     <connections>
                         <outlet property="didYouKnowTextLabel" destination="OwF-nG-dhF" id="LaT-nb-952"/>
                         <segue destination="cAO-fC-Qop" kind="modal" identifier="goToSettings" id="UZw-fr-mBp"/>
+                        <segue destination="38A-x5-xz1" kind="modal" identifier="poopinSegue" id="piw-x6-VoV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKD-SR-fHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="674" y="231"/>
+        </scene>
+        <!--Poopin View Controller-->
+        <scene sceneID="PdW-OP-Bft">
+            <objects>
+                <viewController storyboardIdentifier="PPNPoopinViewController" id="38A-x5-xz1" customClass="PPNPoopinViewController" customModule="poopin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ex9-27-vYu"/>
+                        <viewControllerLayoutGuide type="bottom" id="9za-vC-Q6M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QXI-y7-bE5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Vh-DC-hn1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1097" y="231"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

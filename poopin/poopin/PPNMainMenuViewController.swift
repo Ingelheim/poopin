@@ -37,6 +37,12 @@ class PPNMainMenuViewController : UIViewController {
         
     }
     
+    func startPoopin(sender:UIButton!)
+    {
+        println("Button tapped")
+        performSegueWithIdentifier("poopinSegue", sender: self)
+        
+    }
     
     private func createSettingsButton() {
         var testB = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
@@ -47,7 +53,7 @@ class PPNMainMenuViewController : UIViewController {
         testB.layer.borderWidth = 3
         testB.layer.borderColor = UIColor.whiteColor().CGColor
         testB.setTitle("me poopin", forState: UIControlState.Normal)
-//        testB.addTarget(self, action: "saveContinent:", forControlEvents: UIControlEvents.TouchUpInside)
+        testB.addTarget(self, action: "startPoopin:", forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addSubview(testB)
         

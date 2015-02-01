@@ -15,6 +15,7 @@
 		80A253191A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A253151A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib */; };
 		80A2531B1A7C3E7500F2B992 /* PPNSettingsViewControllerTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2531A1A7C3E7500F2B992 /* PPNSettingsViewControllerTableViewDelegate.swift */; };
 		80A766221A7D1B8200F0672F /* PPNMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A766211A7D1B8200F0672F /* PPNMainMenuViewController.swift */; };
+		80A7662D1A7D449400F0672F /* PPNPoopinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A7662C1A7D449400F0672F /* PPNPoopinViewController.swift */; };
 		80B166081A7C03030000EE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B166071A7C03030000EE25 /* AppDelegate.swift */; };
 		80B1660B1A7C03030000EE25 /* poopin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80B166091A7C03030000EE25 /* poopin.xcdatamodeld */; };
 		80B1660D1A7C03030000EE25 /* PPNSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1660C1A7C03030000EE25 /* PPNSettingsViewController.swift */; };
@@ -42,6 +43,7 @@
 		80A253151A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPNContinentSelectionTableViewCell.xib; sourceTree = "<group>"; };
 		80A2531A1A7C3E7500F2B992 /* PPNSettingsViewControllerTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNSettingsViewControllerTableViewDelegate.swift; sourceTree = "<group>"; };
 		80A766211A7D1B8200F0672F /* PPNMainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNMainMenuViewController.swift; sourceTree = "<group>"; };
+		80A7662C1A7D449400F0672F /* PPNPoopinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNPoopinViewController.swift; sourceTree = "<group>"; };
 		80B166021A7C03030000EE25 /* poopin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poopin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B166061A7C03030000EE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80B166071A7C03030000EE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				80A7662B1A7D438100F0672F /* Misc */,
-				80A766291A7D434400F0672F /* Classes */,
+				80A766291A7D434400F0672F /* Controllers */,
 				80A766281A7D433700F0672F /* Partials */,
 				80A766251A7D430200F0672F /* Delegates */,
 			);
@@ -119,14 +121,15 @@
 			name = Partials;
 			sourceTree = "<group>";
 		};
-		80A766291A7D434400F0672F /* Classes */ = {
+		80A766291A7D434400F0672F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				80B1660C1A7C03030000EE25 /* PPNSettingsViewController.swift */,
 				80A766211A7D1B8200F0672F /* PPNMainMenuViewController.swift */,
 				80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */,
+				80A7662C1A7D449400F0672F /* PPNPoopinViewController.swift */,
 			);
-			name = Classes;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		80A7662A1A7D436800F0672F /* Models */ = {
@@ -313,6 +316,7 @@
 				80B166351A7C13D90000EE25 /* PPNRepositoryManager.swift in Sources */,
 				80A253161A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift in Sources */,
 				80A2531B1A7C3E7500F2B992 /* PPNSettingsViewControllerTableViewDelegate.swift in Sources */,
+				80A7662D1A7D449400F0672F /* PPNPoopinViewController.swift in Sources */,
 				80A766221A7D1B8200F0672F /* PPNMainMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

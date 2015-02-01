@@ -110,7 +110,6 @@ class PPNRepositoryManager {
             if let actualAccount = getAccountByUid(actualPhoneUID) {
                 firstVisit = false
                 currentAccount = actualAccount
-                updateAccount(1)
                 println("******* ACCOUNT EXISTS **********")
             } else {
                 createAccount(actualPhoneUID)
