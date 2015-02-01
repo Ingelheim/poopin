@@ -38,7 +38,7 @@ io.on('connection', function (socket) {
 
     socket.on('disconnect', function(){
         console.log('user disconnected');
-    });
+    });/node
 
     socket.on('xxx', function (data) {
         console.log(io.sockets.length);
