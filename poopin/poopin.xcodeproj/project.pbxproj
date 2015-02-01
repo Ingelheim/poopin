@@ -12,6 +12,10 @@
 		8007E41B1A7E57FD00DDA472 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8007E41A1A7E57FD00DDA472 /* CFNetwork.framework */; };
 		8007E41D1A7E580300DDA472 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8007E41C1A7E580300DDA472 /* libicucore.dylib */; };
 		8007E41F1A7E595000DDA472 /* SocketExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8007E41E1A7E595000DDA472 /* SocketExampleViewController.swift */; };
+		8007E4251A7E72B200DDA472 /* SocketEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8007E4211A7E72B200DDA472 /* SocketEvent.swift */; };
+		8007E4261A7E72B200DDA472 /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8007E4221A7E72B200DDA472 /* SocketEventHandler.swift */; };
+		8007E4271A7E72B200DDA472 /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8007E4231A7E72B200DDA472 /* SocketIOClient.swift */; };
+		8007E4281A7E72B200DDA472 /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8007E4241A7E72B200DDA472 /* SwiftRegex.swift */; };
 		805F72711A7C4EE100F5243A /* PPNUIGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A253121A7C307000F2B992 /* PPNUIGenerator.swift */; };
 		80A253131A7C307000F2B992 /* PPNUIGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A253121A7C307000F2B992 /* PPNUIGenerator.swift */; };
 		80A253161A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */; };
@@ -49,6 +53,10 @@
 		8007E41A1A7E57FD00DDA472 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		8007E41C1A7E580300DDA472 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		8007E41E1A7E595000DDA472 /* SocketExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketExampleViewController.swift; sourceTree = "<group>"; };
+		8007E4211A7E72B200DDA472 /* SocketEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEvent.swift; sourceTree = "<group>"; };
+		8007E4221A7E72B200DDA472 /* SocketEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEventHandler.swift; sourceTree = "<group>"; };
+		8007E4231A7E72B200DDA472 /* SocketIOClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClient.swift; sourceTree = "<group>"; };
+		8007E4241A7E72B200DDA472 /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
 		80A253121A7C307000F2B992 /* PPNUIGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNUIGenerator.swift; sourceTree = "<group>"; };
 		80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNContinentSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		80A253151A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPNContinentSelectionTableViewCell.xib; sourceTree = "<group>"; };
@@ -96,6 +104,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8007E4201A7E727B00DDA472 /* SwiftIO */ = {
+			isa = PBXGroup;
+			children = (
+				8007E4211A7E72B200DDA472 /* SocketEvent.swift */,
+				8007E4221A7E72B200DDA472 /* SocketEventHandler.swift */,
+				8007E4231A7E72B200DDA472 /* SocketIOClient.swift */,
+				8007E4241A7E72B200DDA472 /* SwiftRegex.swift */,
+			);
+			name = SwiftIO;
+			sourceTree = "<group>";
+		};
 		80A766241A7D42F400F0672F /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +223,7 @@
 		80B166041A7C03030000EE25 /* poopin */ = {
 			isa = PBXGroup;
 			children = (
+				8007E4201A7E727B00DDA472 /* SwiftIO */,
 				80A85DA11A7E5624002C8951 /* SocketRocket */,
 				80A7662A1A7D436800F0672F /* Models */,
 				80A766271A7D432700F0672F /* Lib */,
@@ -344,11 +364,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8007E4271A7E72B200DDA472 /* SocketIOClient.swift in Sources */,
 				8007E41F1A7E595000DDA472 /* SocketExampleViewController.swift in Sources */,
 				80B166311A7C0E3A0000EE25 /* Account.swift in Sources */,
+				8007E4281A7E72B200DDA472 /* SwiftRegex.swift in Sources */,
 				80B1660D1A7C03030000EE25 /* PPNSettingsViewController.swift in Sources */,
 				80B1660B1A7C03030000EE25 /* poopin.xcdatamodeld in Sources */,
+				8007E4261A7E72B200DDA472 /* SocketEventHandler.swift in Sources */,
 				80B166081A7C03030000EE25 /* AppDelegate.swift in Sources */,
+				8007E4251A7E72B200DDA472 /* SocketEvent.swift in Sources */,
 				80A253131A7C307000F2B992 /* PPNUIGenerator.swift in Sources */,
 				80A85DA61A7E563B002C8951 /* SRWebSocket.m in Sources */,
 				80B166351A7C13D90000EE25 /* PPNRepositoryManager.swift in Sources */,
