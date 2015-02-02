@@ -139,15 +139,17 @@ class PPNContinentStatsCell {
 class PPNPoopinViewController : UIViewController {
     var startingOffset : Float = 210.0
     let mainOffset : Float = 210.0
-    let socket = SocketIOClient(socketURL: "http://localhost:8080")
+    var socket : SocketIOClient?
+    var selectedContinent : String?
+//    let socket = SocketIOClient(socketURL: "http://localhost:8080")
     
     var continentCells = [
-        "Europe" : PPNContinentStatsCell(continentName: "Europe", initialValue: 200, cellOffset: 210.0),
-        "N. America" : PPNContinentStatsCell(continentName: "N. America", initialValue: 200, cellOffset: 250.0),
-        "S. America" : PPNContinentStatsCell(continentName: "S. America", initialValue: 200, cellOffset: 290.0),
-        "Asia" : PPNContinentStatsCell(continentName: "Asia", initialValue: 200, cellOffset: 330.0),
-        "Australia" : PPNContinentStatsCell(continentName: "Australia", initialValue: 200, cellOffset: 370),
-        "Africa" : PPNContinentStatsCell(continentName: "Africa", initialValue: 200, cellOffset: 410.0)
+        "Europe" : PPNContinentStatsCell(continentName: "Europe", initialValue: 0, cellOffset: 210.0),
+        "N. America" : PPNContinentStatsCell(continentName: "N. America", initialValue: 0, cellOffset: 250.0),
+        "S. America" : PPNContinentStatsCell(continentName: "S. America", initialValue: 0, cellOffset: 290.0),
+        "Asia" : PPNContinentStatsCell(continentName: "Asia", initialValue: 0, cellOffset: 330.0),
+        "Australia" : PPNContinentStatsCell(continentName: "Australia", initialValue: 0, cellOffset: 370),
+        "Africa" : PPNContinentStatsCell(continentName: "Africa", initialValue: 0, cellOffset: 410.0)
     ]
     
     var liveStats : [String : AnyObject] =
@@ -180,13 +182,46 @@ class PPNPoopinViewController : UIViewController {
     let UIGenerator = PPNUIGenerator.sharedInstance
     var timerLabel : UILabel?
     var currentTime = 0
+//    var currentContinent = Int?
 //    let tableViewDelegate = SettingsViewControllerTableViewDelegate()
+    
+    required init(coder aDecoder: NSCoder) {
+        println("init view \(socket)")
+//        currentContinent = 
+        var currentContinent = repositoryManager.currentAccount!.continent as Int
+        selectedContinent = Continents.getContinent(currentContinent)
+//        println("continent \(Continents.getContinent(currentContinent))")
+        socket = SocketIOClient(socketURL: "http://rocky-spire-9621.herokuapp.com:80")
+        super.init(coder: aDecoder)
+    }
+    
+    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    convenience override init() {
+        self.init(nibName: nil, bundle: nil)
+    }
+    
+    deinit {
+        println("deinit view")
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+//        getContinent()
+        
         startingOffset = mainOffset
         println(startingOffset)
         startAndRegisterSocket()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        deregister()
+        println("deinit view")
+        socket!.close()
+        socket = nil
     }
     
     override func viewDidLoad() {
@@ -253,7 +288,7 @@ class PPNPoopinViewController : UIViewController {
     }
     
     private func createLogoView() {
-        UIGenerator.generateLogo(self, showSettings: false)
+        UIGenerator.generateLogo(self, showSettings: true)
         self.view.addSubview(UIGenerator.logoView!)
         self.view.addSubview(UIGenerator.sectionHeaderView("Live poopin stats"))
     }
@@ -307,22 +342,18 @@ class PPNPoopinViewController : UIViewController {
     }
     
     func test(sender:UIButton!) {
-        for (name, continentCell) in continentCells as [String: PPNContinentStatsCell] {
-            //            createContinentCell(continent as String, poopValue: poopValue as Int)
-            continentCell.updateValuesAndReturnNewCell(100)
-//            self.view.addSubview(continentCell.wholeCell!)
-        }
+        performSegueWithIdentifier("goToSettings2", sender: self)
     }
     
     func startAndRegisterSocket() {
-        socket.connect()
+        socket!.connect()
         
-        socket.on("connect") {data in
+        socket!.on("connect") {data in
             println("socket connected")
             self.sendInitialMessage()
         }
         
-        socket.on("updatePoopinStats") {data in
+        socket!.on("updatePoopinStats") {data in
             println("CALLED")
             
 //            var jerror = NSError()
@@ -344,7 +375,20 @@ class PPNPoopinViewController : UIViewController {
         }
     }
     
-    func sendInitialMessage() {
-        socket.emit("initialConnection")
+    func goToSettings(sender:UIButton!)
+    {
+        println("Button tapped")
+        performSegueWithIdentifier("goToSettings2", sender: self)
+        
     }
+    
+    func sendInitialMessage() {
+        socket!.emit("initialConnection", ["continent" : selectedContinent!])
+    }
+    
+    func deregister() {
+        socket!.emit("disconnecting", ["continent" : selectedContinent!])
+    }
+    
+    
 }

@@ -57,7 +57,7 @@
                     <connections>
                         <outlet property="didYouKnowTextLabel" destination="OwF-nG-dhF" id="LaT-nb-952"/>
                         <segue destination="cAO-fC-Qop" kind="modal" identifier="goToSettings" id="UZw-fr-mBp"/>
-                        <segue destination="38A-x5-xz1" kind="modal" identifier="poopinSegue" id="piw-x6-VoV"/>
+                        <segue destination="38A-x5-xz1" kind="custom" identifier="poopinSegue" id="piw-x6-VoV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKD-SR-fHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -77,28 +77,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="oHO-gr-5b8" kind="modal" identifier="goToSettings2" id="q52-N3-fSM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Vh-DC-hn1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1097" y="231"/>
-        </scene>
-        <!--Socket Example-->
-        <scene sceneID="s45-NK-Q74">
-            <objects>
-                <viewController storyboardIdentifier="SocketExample" id="gcf-mF-Ogj" customClass="SocketExample" customModule="poopin" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9YJ-cF-67F"/>
-                        <viewControllerLayoutGuide type="bottom" id="CH7-ua-v4u"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="U4e-O6-43Z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tD5-g8-cvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="686" y="945"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -106,4 +91,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="zgl-gW-GmQ"/>
+    </inferredMetricsTieBreakers>
 </document>

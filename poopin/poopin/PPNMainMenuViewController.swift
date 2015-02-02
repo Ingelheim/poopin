@@ -1,6 +1,6 @@
 import UIKit
 
-class PPNMainMenuViewController : UIViewController, SRWebSocketDelegate {
+class PPNMainMenuViewController : UIViewController {
     let repositoryManager = PPNRepositoryManager.sharedInstance
     let UIGenerator = PPNUIGenerator.sharedInstance
     @IBOutlet weak var didYouKnowTextLabel: UILabel!
@@ -57,68 +57,5 @@ class PPNMainMenuViewController : UIViewController, SRWebSocketDelegate {
         
         self.view.addSubview(testB)
         
-    }
-    
-//    SOCKET
-    
-    func initHandshake() {
-//        let time:NSTimeInterval = NSDate().timeIntervalSince1970 * 1000
-//        
-//        var endpoint = "http://socket.io/1?t=\(time)"
-//        
-//        var handshakeTask:NSURLSessionTask = session!.dataTaskWithURL(NSURL.URLWithString(endpoint), completionHandler: { (data:NSData!, response:NSURLResponse!, error:NSError!) in
-//            if !error {
-//                let stringData:NSString = NSString(data: data, encoding: NSUTF8StringEncoding)
-//                let handshakeToken:NSString = stringData.componentsSeparatedByString(":")[0] as NSString
-//                println("HANDSHAKE \(handshakeToken)")
-//                
-//                self.socketConnect(handshakeToken)
-//            }
-//        })
-//        handshakeTask.resume()
-    }
-    
-    func socketConnect(token:NSString) {
-//        socketio = SRWebSocket(URLRequest: NSURLRequest(URL: NSURL(string: "ws://\(server)/socket.io/1/websocket/\(token)")))
-//        socketio!.delegate = self
-//        socketio!.open()
-    }
-    
-    func webSocket(webSocket: SRWebSocket!, didReceiveMessage message: AnyObject!) {
-//        // All incoming messages ( socket.on() ) are received in this function. Parsed with JSON
-//        println("MESSAGE: \(message)")
-//        
-//        var jsonError:NSError?
-//        let messageArray = (message as NSString).componentsSeparatedByString(":::")
-//        let data:NSData = messageArray[messageArray.endIndex - 1].dataUsingEncoding(NSUTF8StringEncoding)
-//        var json:AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError)
-//        
-//        if json != nil {
-//            let event: NSString = json!["name"] as NSString
-//            let args: NSDictionary = (json!["args"] as NSArray)[0] as NSDictionary
-//            
-//            if (event.isEqualToString("one")) {
-//                didReceiveEventOne(args)
-//            }
-//            else if (event.isEqualToString("two")) {
-//                didReceiveEventTwo(args)
-//            }
-//            else if (event.isEqualToString("three")) {
-//                didReceiveEventThree(args)
-//            }
-//        }
-    }
-    
-    func didReceiveEventOne(args: NSDictionary) {
-//        var dict = [
-//            "name": "event",
-//            "args": [["Method": "One"]]
-//        ]
-//        var jsonSendError:NSError?
-//        var jsonSend = NSJSONSerialization.dataWithJSONObject(dict, options: NSJSONWritingOptions(0), error: &jsonSendError)
-//        var jsonString = NSString(data: jsonSend, encoding: NSUTF8StringEncoding)
-//        println("JSON SENT \(jsonString)")
-//        let str:NSString = "5:::\(jsonString)"
-//        socketio?.send(str)
     }
 }

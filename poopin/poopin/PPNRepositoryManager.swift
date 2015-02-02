@@ -2,12 +2,29 @@ import CoreData
 import UIKit
 
 enum Continents : Int {
-    case EUROPE = 0
+    case ASIA = 0
     case AUSTRALIA = 1
-    case NORTH_AMERICA = 2
-    case SOUTH_AMERICA = 3
-    case AFRICA = 4
-    case ASIA = 5
+    case AFRICA = 2
+    case EUROPE = 3
+    case NORTH_AMERICA = 4
+    case SOUTH_AMERICA = 5
+    
+    static func getContinent(continent: Int) -> String {
+        switch continent {
+        case 0:
+            return "Asia"
+        case 1:
+            return "Australia"
+        case 2:
+            return "Africa"
+        case 3:
+            return "Europe"
+        case 4:
+            return "N. America"
+        default:
+            return "S. America"
+        }
+    }
 }
 
 class PPNRepositoryManager {
