@@ -32,7 +32,7 @@ class SettingsViewController: UIViewController {
         testB.frame = CGRectMake((self.view.frame.midX - 50.0), (self.view.frame.maxY - 45.0), 100.0, 35.0)
         testB.backgroundColor = UIColor.clearColor()
         testB.layer.cornerRadius = 5
-        testB.layer.borderWidth = 3
+        testB.layer.borderWidth = 2
         testB.layer.borderColor = UIColor.whiteColor().CGColor
         testB.setTitle("Save", forState: UIControlState.Normal)
         testB.addTarget(self, action: "saveContinent:", forControlEvents: UIControlEvents.TouchUpInside)

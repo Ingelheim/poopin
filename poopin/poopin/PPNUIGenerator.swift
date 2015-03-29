@@ -87,7 +87,7 @@ class PPNUIGenerator {
         logoText.text = (logoSpec["text"] as! String)
         logoText.textAlignment = NSTextAlignment.Center
         logoText.textColor = (logoSpec["textColor"] as! UIColor)
-        logoText.font = UIFont.boldSystemFontOfSize(32.0)
+        logoText.font = UIFont(name: "Lato-Bold", size: 32.0)
         
         return logoText
     }
@@ -104,7 +104,7 @@ class PPNUIGenerator {
         logoText.text = name
         logoText.textAlignment = NSTextAlignment.Center
         logoText.textColor = UIColor(red: 0.02, green: 0.15, blue: 0.35, alpha: 1.0)
-        logoText.font = UIFont.boldSystemFontOfSize(20.0)
+        logoText.font = UIFont(name: "Lato-Regular", size: 20.0)
         logoText.backgroundColor = UIColor.whiteColor()
         
         return logoText

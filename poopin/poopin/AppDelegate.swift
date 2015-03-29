@@ -27,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        println("QUIT ALL SOCKETS")
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
@@ -40,6 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
+        println("QUIT ALL SOCKETS")
+        
         self.saveContext()
     }
     
@@ -49,6 +53,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().alpha = 1.0
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.window?.backgroundColor = UIColor(red: 0.02, green: 0.15, blue: 0.35, alpha: 1.0)
+        
+        UILabel.appearance().font = UIFont(name: "Lato-Regular", size: 20.0)
+        UIButton.appearance().titleLabel?.font = UIFont(name: "Lato-Regular", size: 20.0)
     }
 
     // MARK: - Core Data stack

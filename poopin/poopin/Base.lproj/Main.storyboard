@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7525" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="B31-jE-l98">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7525" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="B31-jE-l98">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7516"/>
     </dependencies>
@@ -24,10 +24,6 @@
         <scene sceneID="V0N-o1-OGn">
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" id="Sz0-tJ-hfY" customClass="SettingsViewController" customModule="poopin" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uBy-pO-21n"/>
-                        <viewControllerLayoutGuide type="bottom" id="XlM-iv-YAz"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Hqh-tI-QmF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,17 +42,18 @@
         <scene sceneID="Hyn-ns-E3a">
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="9cd-xw-gMB" customClass="PPNMainMenuViewController" customModule="poopin" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SYG-ck-EW7"/>
-                        <viewControllerLayoutGuide type="bottom" id="ho7-io-cQ9"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9CE-ce-yho">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="COU-5f-dM1">
-                        <barButtonItem key="backBarButtonItem" title="Settings" id="X5w-Po-tQI"/>
+                        <barButtonItem key="leftBarButtonItem" image="cog" style="plain" id="x9a-aW-I5y">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="settingsButtonClicked:" destination="9cd-xw-gMB" id="9cS-oB-fnn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="vJe-sb-A5h" kind="push" identifier="poopinSegue" id="TS8-fx-e0R"/>
@@ -70,10 +67,6 @@
         <scene sceneID="xbr-1t-PEg">
             <objects>
                 <viewController id="vJe-sb-A5h" customClass="PPNPoopinViewController" customModule="poopin" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7qu-hE-5He"/>
-                        <viewControllerLayoutGuide type="bottom" id="byx-ZS-NNV"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RHY-yf-FNC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,10 +82,6 @@
         <scene sceneID="ssx-lI-4G5">
             <objects>
                 <viewController id="3ie-OZ-yTc" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wJl-W7-RQq"/>
-                        <viewControllerLayoutGuide type="bottom" id="fv2-J3-EMN"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="74q-JQ-Rms">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,6 +93,9 @@
             <point key="canvasLocation" x="2241" y="231"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cog" width="33" height="33"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

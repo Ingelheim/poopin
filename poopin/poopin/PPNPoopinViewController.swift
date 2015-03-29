@@ -32,7 +32,7 @@ class PPNContinentStatsCellLeft : UILabel {
         self.text = continentName
         self.textAlignment = NSTextAlignment.Left
         self.textColor = UIColor.whiteColor()
-        self.font = UIFont.boldSystemFontOfSize(20.0)
+        self.font = UIFont(name: "Lato-Regular", size: 20.0)
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -53,7 +53,7 @@ class PPNContinentStatsCellRight : UILabel {
         self.text = String(poopValue)
         self.textAlignment = NSTextAlignment.Right
         self.textColor = getCellColor(state)
-        self.font = UIFont.boldSystemFontOfSize(25.0)
+        self.font = UIFont(name: "Lato-Bold", size: 25.0)
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -137,13 +137,13 @@ class PPNContinentStatLabel : UIView {
         mainTextLabel.text = String(oldValue)
         mainTextLabel.textAlignment = NSTextAlignment.Center
         mainTextLabel.textColor = UIColor.whiteColor()
-        mainTextLabel.font = UIFont.boldSystemFontOfSize(40.0)
+        mainTextLabel.font = UIFont(name: "Lato-Bold", size: 40.0)
         
         var subTextLabel = UILabel(frame: CGRectMake(0.0, 40.0, parentView.frame.maxX, 35.0))
         subTextLabel.text = "people are poopin right now"
         subTextLabel.textAlignment = NSTextAlignment.Center
         subTextLabel.textColor = UIColor.whiteColor()
-        subTextLabel.font = UIFont.boldSystemFontOfSize(15.0)
+        subTextLabel.font = UIFont(name: "Lato-Regular", size: 20.0)
         
         self.addSubview(mainTextLabel)
         self.addSubview(subTextLabel)
@@ -291,7 +291,7 @@ class PPNPoopinViewController : UIViewController {
         timerLabel!.text = "00:00"
         timerLabel!.textAlignment = NSTextAlignment.Center
         timerLabel!.textColor = UIColor.whiteColor()
-        timerLabel!.font = UIFont.boldSystemFontOfSize(40.0)
+        timerLabel!.font = UIFont(name: "Lato-Bold", size: 40.0)
         
         self.view.addSubview(timerLabel!)
     }
@@ -302,7 +302,7 @@ class PPNPoopinViewController : UIViewController {
         testB.frame = CGRectMake((self.view.frame.midX - 100.0), (self.view.frame.maxY - 45.0), 200.0, 35.0)
         testB.backgroundColor = UIColor.clearColor()
         testB.layer.cornerRadius = 5
-        testB.layer.borderWidth = 3
+        testB.layer.borderWidth = 2
         testB.layer.borderColor = UIColor.whiteColor().CGColor
         testB.setTitle("me no poopin", forState: UIControlState.Normal)
         testB.addTarget(self, action: "test:", forControlEvents: UIControlEvents.TouchUpInside)
