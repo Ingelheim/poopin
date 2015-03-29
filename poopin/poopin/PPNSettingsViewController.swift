@@ -9,14 +9,16 @@ class SettingsViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.view.alpha = 1.0
         tableViewDelegate.currentContinent = repositoryManager.currentAccount?.continent as? Int
         println(repositoryManager.currentAccount?.continent)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 0.02, green: 0.15, blue: 0.35, alpha: 1.0)
-        createLogoView()
+        self.view.backgroundColor = UIColor.clearColor()
+        navigationItem.titleView = UIGenerator.generateLogoText()
+        self.view.addSubview(PPNUIGenerator.sharedInstance.sectionHeaderView("Where you poopin from?"))
         createTableView()
         createSaveButton()
     }
@@ -40,7 +42,7 @@ class SettingsViewController: UIViewController {
     }
     
     private func createTableView() {
-        var tableView = UITableView(frame: CGRect(x: 0.0, y: 100.0, width: self.view.frame.maxX, height: 330.0))
+        var tableView = UITableView(frame: CGRect(x: 0.0, y: 150.0, width: self.view.frame.maxX, height: 300.0))
         tableView.registerNib(UINib(nibName: "PPNContinentSelectionTableViewCell", bundle: nil), forCellReuseIdentifier: "continentCell")
         
         tableView.delegate = tableViewDelegate
@@ -50,16 +52,9 @@ class SettingsViewController: UIViewController {
         self.view.addSubview(tableView)
     }
     
-    private func createLogoView() {
-        UIGenerator.generateLogo(self, showSettings: false)
-        self.view.addSubview(UIGenerator.logoView!)
-    }
-    
-    func saveContinent(sender:UIButton!)
-    {
-        println("Button tapped")
+    func saveContinent(sender:UIButton!) {
         repositoryManager.updateAccount(tableViewDelegate.currentContinent!)
+        self.view.alpha = 0.0
         performSegueWithIdentifier("saveSettings", sender: self)
-        
     }
 }

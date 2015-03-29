@@ -140,7 +140,7 @@ class PPNContinentStatLabel : UIView {
         mainTextLabel.font = UIFont.boldSystemFontOfSize(40.0)
         
         var subTextLabel = UILabel(frame: CGRectMake(0.0, 40.0, parentView.frame.maxX, 35.0))
-        subTextLabel.text = "people are also poopin right now"
+        subTextLabel.text = "people are poopin right now"
         subTextLabel.textAlignment = NSTextAlignment.Center
         subTextLabel.textColor = UIColor.whiteColor()
         subTextLabel.font = UIFont.boldSystemFontOfSize(15.0)
@@ -219,6 +219,7 @@ class PPNPoopinViewController : UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.view.alpha = 1.0
         
         startingOffset = mainOffset
         startAndRegisterSocket()
@@ -233,8 +234,10 @@ class PPNPoopinViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 0.02, green: 0.15, blue: 0.35, alpha: 1.0)
-        createLogoView()
+        self.view.backgroundColor = UIColor.clearColor()
+        navigationItem.titleView = UIGenerator.generateLogoText()
+                self.view.addSubview(PPNUIGenerator.sharedInstance.sectionHeaderView("Live poopin stats"))
+        navigationItem.setHidesBackButton(true, animated: false)
         createMainPoopinStatLabel()
         createTimerLabel()
         
@@ -279,12 +282,6 @@ class PPNPoopinViewController : UIViewController {
         poopinStatLabel?.updateTotalLabel(total)
     }
     
-    private func createLogoView() {
-        UIGenerator.generateLogo(self, showSettings: true)
-        self.view.addSubview(UIGenerator.logoView!)
-        self.view.addSubview(UIGenerator.sectionHeaderView("Live poopin stats"))
-    }
-    
     func createMainPoopinStatLabel() {
         poopinStatLabel = PPNContinentStatLabel(parentView: self.view)
     }
@@ -315,7 +312,8 @@ class PPNPoopinViewController : UIViewController {
     }
     
     func test(sender:UIButton!) {
-        performSegueWithIdentifier("goToSettings2", sender: self)
+        self.view.alpha = 0.0
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     func startAndRegisterSocket() {
@@ -339,7 +337,8 @@ class PPNPoopinViewController : UIViewController {
     }
     
     func goToSettings(sender:UIButton!) {
-        performSegueWithIdentifier("goToSettings2", sender: self)
+        self.view.alpha = 0.0
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     func sendInitialMessage() {

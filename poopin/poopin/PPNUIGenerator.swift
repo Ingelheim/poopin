@@ -16,7 +16,7 @@ class PPNUIGenerator {
     
     private var sharedSpec : [String: AnyObject] =
     [
-        "height" : CGFloat(100.0)
+        "height" : CGFloat(35.0)
     ]
     
     private var logoBackgroundSpec : [String: AnyObject] =
@@ -56,9 +56,9 @@ class PPNUIGenerator {
         maxX = CGFloat(screenSize.height)
         maxY = CGFloat(screenSize.width)
         
-        logoNavBarFrame = CGRect(x: 0.0, y: 0.0, width: maxY, height: sharedSpec["height"] as! CGFloat)
+        logoNavBarFrame = CGRect(x: 0.0, y: 0.0, width: 100, height: sharedSpec["height"] as! CGFloat)
         
-        sectionHeaderFrame = CGRect(x: 0.0, y: 100.0, width: maxY, height: 30.0)
+        sectionHeaderFrame = CGRect(x: 0.0, y: 64.0, width: maxY, height: 30.0)
     }
     
     private func generateLogo() {
@@ -82,12 +82,12 @@ class PPNUIGenerator {
         }
     }
     
-    private func generateLogoText() -> UIView {
+    func generateLogoText() -> UIView {
         var logoText = UILabel(frame: logoNavBarFrame!)
         logoText.text = (logoSpec["text"] as! String)
         logoText.textAlignment = NSTextAlignment.Center
         logoText.textColor = (logoSpec["textColor"] as! UIColor)
-        logoText.font = UIFont.boldSystemFontOfSize(40.0)
+        logoText.font = UIFont.boldSystemFontOfSize(32.0)
         
         return logoText
     }

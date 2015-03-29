@@ -1,89 +1,107 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="cAO-fC-Qop">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7525" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="B31-jE-l98">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7516"/>
     </dependencies>
     <scenes>
-        <!--Settings View Controller-->
-        <scene sceneID="Our-B5-yqu">
+        <!--Navigation Controller-->
+        <scene sceneID="IM1-A7-ddy">
             <objects>
-                <viewController storyboardIdentifier="SettingsViewController" id="cAO-fC-Qop" customClass="SettingsViewController" customModule="poopin" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="B31-jE-l98" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pz9-rJ-FS5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Sz0-tJ-hfY" kind="relationship" relationship="rootViewController" id="PCe-QN-rEo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Gg-We-SU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="241" y="925"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="V0N-o1-OGn">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="Sz0-tJ-hfY" customClass="SettingsViewController" customModule="poopin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="F8O-lA-7xg"/>
-                        <viewControllerLayoutGuide type="bottom" id="tmo-dg-3jh"/>
+                        <viewControllerLayoutGuide type="top" id="uBy-pO-21n"/>
+                        <viewControllerLayoutGuide type="bottom" id="XlM-iv-YAz"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8cm-bf-dj0">
+                    <view key="view" contentMode="scaleToFill" id="Hqh-tI-QmF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6ea-gP-AGZ"/>
                     <connections>
-                        <segue destination="oHO-gr-5b8" kind="modal" identifier="saveSettings" id="zgl-gW-GmQ"/>
+                        <segue destination="9cd-xw-gMB" kind="push" identifier="saveSettings" id="Q43-m5-Rmd"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mi3-FJ-TvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lSB-qp-yH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="241" y="231"/>
+            <point key="canvasLocation" x="680" y="925"/>
         </scene>
         <!--Main Menu View Controller-->
-        <scene sceneID="RyY-J5-GoY">
+        <scene sceneID="Hyn-ns-E3a">
             <objects>
-                <viewController storyboardIdentifier="PPNMainMenuViewController" id="oHO-gr-5b8" customClass="PPNMainMenuViewController" customModule="poopin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="9cd-xw-gMB" customClass="PPNMainMenuViewController" customModule="poopin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="F0F-rk-uV3"/>
-                        <viewControllerLayoutGuide type="bottom" id="evf-65-dX3"/>
+                        <viewControllerLayoutGuide type="top" id="SYG-ck-EW7"/>
+                        <viewControllerLayoutGuide type="bottom" id="ho7-io-cQ9"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Jkr-qu-Ukz">
+                    <view key="view" contentMode="scaleToFill" id="9CE-ce-yho">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Did you know text label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwF-nG-dhF">
-                                <rect key="frame" x="32" y="153" width="256" height="21"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="OwF-nG-dhF" secondAttribute="centerY" constant="120.5" id="B8Q-So-TyC"/>
-                            <constraint firstItem="OwF-nG-dhF" firstAttribute="leading" secondItem="Jkr-qu-Ukz" secondAttribute="leadingMargin" constant="16" id="Cau-6n-Y9L"/>
-                            <constraint firstAttribute="centerX" secondItem="OwF-nG-dhF" secondAttribute="centerX" id="Fkv-Fr-MYD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OwF-nG-dhF" secondAttribute="trailing" constant="16" id="Rs4-lw-epA"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="yfr-hc-Ezh"/>
+                    <navigationItem key="navigationItem" id="COU-5f-dM1">
+                        <barButtonItem key="backBarButtonItem" title="Settings" id="X5w-Po-tQI"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="didYouKnowTextLabel" destination="OwF-nG-dhF" id="LaT-nb-952"/>
-                        <segue destination="cAO-fC-Qop" kind="modal" identifier="goToSettings" id="UZw-fr-mBp"/>
-                        <segue destination="38A-x5-xz1" kind="custom" identifier="poopinSegue" id="piw-x6-VoV"/>
+                        <segue destination="vJe-sb-A5h" kind="push" identifier="poopinSegue" id="TS8-fx-e0R"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wKD-SR-fHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SOy-hQ-lVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="674" y="231"/>
+            <point key="canvasLocation" x="1105" y="925"/>
         </scene>
         <!--Poopin View Controller-->
-        <scene sceneID="PdW-OP-Bft">
+        <scene sceneID="xbr-1t-PEg">
             <objects>
-                <viewController storyboardIdentifier="PPNPoopinViewController" id="38A-x5-xz1" customClass="PPNPoopinViewController" customModule="poopin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vJe-sb-A5h" customClass="PPNPoopinViewController" customModule="poopin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ex9-27-vYu"/>
-                        <viewControllerLayoutGuide type="bottom" id="9za-vC-Q6M"/>
+                        <viewControllerLayoutGuide type="top" id="7qu-hE-5He"/>
+                        <viewControllerLayoutGuide type="bottom" id="byx-ZS-NNV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QXI-y7-bE5">
+                    <view key="view" contentMode="scaleToFill" id="RHY-yf-FNC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <segue destination="oHO-gr-5b8" kind="modal" identifier="goToSettings2" id="q52-N3-fSM"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="HCO-hG-uYW"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Vh-DC-hn1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IVk-PN-QuR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="231"/>
+            <point key="canvasLocation" x="1552" y="925"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ssx-lI-4G5">
+            <objects>
+                <viewController id="3ie-OZ-yTc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wJl-W7-RQq"/>
+                        <viewControllerLayoutGuide type="bottom" id="fv2-J3-EMN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="74q-JQ-Rms">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TKY-Uo-jBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2241" y="231"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -91,7 +109,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="zgl-gW-GmQ"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -36,23 +36,16 @@ class SettingsViewControllerTableViewDelegate: NSObject, UITableViewDelegate, UI
         return continents.count
     }
     
-    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        var view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 400, height: 40.0))
-        
-        view.backgroundColor = UIColor.blackColor()
-        return view
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.0
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.0
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 50.0
-    }
-    
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30.0
-    }
-    
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return PPNUIGenerator.sharedInstance.sectionHeaderView("Where you poopin from?")
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

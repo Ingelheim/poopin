@@ -9,20 +9,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         var sharedRepoManager = PPNRepositoryManager.sharedInstance
+        let UIGenerator = PPNUIGenerator.sharedInstance
         
         PPNRepositoryManager.sharedInstance.checkOrCreateUniqueAccount()
-        
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        var initialViewController = storyboard.instantiateViewControllerWithIdentifier("PPNMainMenuViewController") as! UIViewController
-        
-        if  sharedRepoManager.firstVisit {
-            initialViewController = storyboard.instantiateViewControllerWithIdentifier("SettingsViewController") as! UIViewController
-        }
-        
-        self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
+        setUpUI() 
         
         return true
     }
@@ -49,6 +41,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+    }
+    
+    func setUpUI() {
+        UINavigationBar.appearance().tintColor = UIColor(red: 0.02, green: 0.15, blue: 0.35, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 0.02, green: 0.15, blue: 0.35, alpha: 1.0)
+        UINavigationBar.appearance().alpha = 1.0
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.window?.backgroundColor = UIColor(red: 0.02, green: 0.15, blue: 0.35, alpha: 1.0)
     }
 
     // MARK: - Core Data stack
@@ -113,6 +113,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
 

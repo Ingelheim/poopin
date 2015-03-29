@@ -7,35 +7,25 @@ class PPNMainMenuViewController : UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.view.alpha = 1.0
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 0.02, green: 0.15, blue: 0.35, alpha: 1.0)
-        createLogoView()
-        createDidYouKnow()
+        self.view.backgroundColor = UIColor.clearColor()
+        navigationItem.titleView = UIGenerator.generateLogoText()
+        self.view.addSubview(PPNUIGenerator.sharedInstance.sectionHeaderView("What's poopin?"))
         createSettingsButton()
     }
     
-    private func createLogoView() {
-        UIGenerator.generateLogo(self, showSettings: true)
-        self.view.addSubview(UIGenerator.logoView!)
-        self.view.addSubview(UIGenerator.sectionHeaderView("Whats poopin?"))
-    }
-    
-    private func createDidYouKnow() {
-        didYouKnowTextLabel.text = "Digestion can take anywhere from 24 to 72 hours, during which time the food you’ve eaten travels down your esophagus to your stomach, then to your small intestine, your large intestine, and out through the anus."
-        didYouKnowTextLabel.textColor = UIColor.whiteColor()
-    }
-    
     func goToSettings(sender:UIButton!) {
+        self.view.alpha = 0.0
         performSegueWithIdentifier("goToSettings", sender: self)
-        
     }
     
     func startPoopin(sender:UIButton!) {
+        self.view.alpha = 0.0
         performSegueWithIdentifier("poopinSegue", sender: self)
-        
     }
     
     private func createSettingsButton() {
@@ -50,6 +40,5 @@ class PPNMainMenuViewController : UIViewController {
         testB.addTarget(self, action: "startPoopin:", forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addSubview(testB)
-        
     }
 }
