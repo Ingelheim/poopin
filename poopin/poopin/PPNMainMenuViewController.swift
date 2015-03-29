@@ -26,20 +26,14 @@ class PPNMainMenuViewController : UIViewController {
     private func createDidYouKnow() {
         didYouKnowTextLabel.text = "Digestion can take anywhere from 24 to 72 hours, during which time the food you’ve eaten travels down your esophagus to your stomach, then to your small intestine, your large intestine, and out through the anus."
         didYouKnowTextLabel.textColor = UIColor.whiteColor()
-//        didYouKnowTextLabel.font = UIFont.boldSystemFontOfSize(30.0)
-        
     }
     
-    func goToSettings(sender:UIButton!)
-    {
-        println("Button tapped")
+    func goToSettings(sender:UIButton!) {
         performSegueWithIdentifier("goToSettings", sender: self)
         
     }
     
-    func startPoopin(sender:UIButton!)
-    {
-        println("Button tapped")
+    func startPoopin(sender:UIButton!) {
         performSegueWithIdentifier("poopinSegue", sender: self)
         
     }

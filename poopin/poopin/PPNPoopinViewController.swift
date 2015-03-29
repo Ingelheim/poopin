@@ -73,7 +73,6 @@ class PPNContinentStatsCellRight : UILabel {
         default:
             return UIColor.whiteColor()
         }
-        
     }
 }
 
@@ -102,19 +101,12 @@ class PPNContinentStatsCell {
         wholeCell = PPNContinentStatsCellWhole(offset: viewOffset!)
         wholeCell?.addSubview(leftCellPart!)
         wholeCell?.addSubview(rightCellPart!)
-        
-        println(rightCellPart!)
-        
-//        return wholeCell!
     }
     
     func updateValuesAndReturnNewCell(updatedValue: Int) {
         oldValue = currentValue
         newValue = updatedValue
         currentValue = newValue
-        
-        println("OLD: \(oldValue!)")
-        println("New: \(newValue!)")
         
         var cellState = CELL_STATES.SAME
         
@@ -124,24 +116,77 @@ class PPNContinentStatsCell {
             cellState = CELL_STATES.HIGHER
         }
         
-        println("STATE: \(cellState.rawValue)")
-        
         rightCellPart?.removeFromSuperview()
         rightCellPart = PPNContinentStatsCellRight(poopValue: currentValue!, state: cellState)
         
         wholeCell?.addSubview(rightCellPart!)
-        
-        println(wholeCell?.subviews.count)
     }
 }
 
+class PPNContinentStatLabel : UIView {
+    var UIGenerator = PPNUIGenerator.sharedInstance
+    var oldValue: Int = 0
+    var newValue: Int = 0
+    var mainTextLabel : UILabel!
+    
+    init(parentView: UIView) {
+        super.init(frame: CGRectZero)
+        self.frame = CGRectMake(0.0, 130.0, parentView.frame.maxX, 80.0)
+        
+        mainTextLabel = UILabel(frame: CGRectMake(0.0, 5.0, parentView.frame.maxX, 40.0))
+        mainTextLabel.text = String(oldValue)
+        mainTextLabel.textAlignment = NSTextAlignment.Center
+        mainTextLabel.textColor = UIColor.whiteColor()
+        mainTextLabel.font = UIFont.boldSystemFontOfSize(40.0)
+        
+        var subTextLabel = UILabel(frame: CGRectMake(0.0, 40.0, parentView.frame.maxX, 35.0))
+        subTextLabel.text = "people are also poopin right now"
+        subTextLabel.textAlignment = NSTextAlignment.Center
+        subTextLabel.textColor = UIColor.whiteColor()
+        subTextLabel.font = UIFont.boldSystemFontOfSize(15.0)
+        
+        self.addSubview(mainTextLabel)
+        self.addSubview(subTextLabel)
+        
+        parentView.addSubview(self)
+    }
+    
+    func updateTotalLabel(newVal: Int) {
+        oldValue = newValue
+        newValue = newVal
+        
+        var newState : CELL_STATES = oldValue < newValue ? .HIGHER : oldValue > newValue ? .LOWER : .SAME
+        
+        mainTextLabel.text = String(newValue)
+        mainTextLabel.textColor = getLabelColor(newState)
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    private func getLabelColor(state: CELL_STATES) -> UIColor {
+        switch state {
+        case .LOWER:
+            return UIColor.redColor()
+        case .HIGHER:
+            return UIColor.greenColor()
+        default:
+            return UIColor.whiteColor()
+        }
+    }
+}
 
 class PPNPoopinViewController : UIViewController {
     var startingOffset : Float = 210.0
     let mainOffset : Float = 210.0
     var socket : SocketIOClient?
     var selectedContinent : String?
-//    let socket = SocketIOClient(socketURL: "http://localhost:8080")
+    var poopinStatLabel: PPNContinentStatLabel?
     
     var continentCells = [
         "Europe" : PPNContinentStatsCell(continentName: "Europe", initialValue: 0, cellOffset: 210.0),
@@ -152,46 +197,15 @@ class PPNPoopinViewController : UIViewController {
         "Africa" : PPNContinentStatsCell(continentName: "Africa", initialValue: 0, cellOffset: 410.0)
     ]
     
-    var liveStats : [String : AnyObject] =
-    [
-        "total" : 200,
-        "continents" :
-        ["Europe" : 200,
-        "N. America" : 200,
-        "S. America" : 200,
-        "Asia" : 200,
-        "Australia" : 200,
-        "Africa" : 200]
-    ]
-    
-    var liveStats2 : [String : AnyObject] =
-    [
-        "total" : 100,
-        "continents" :
-            ["Europe" : 150,
-                "N. America" : 200,
-                "S. America" : 250,
-                "Asia" : 200,
-                "Australia" : 200,
-                "Africa" : 200]
-    ]
-    
-    
-    
     let repositoryManager = PPNRepositoryManager.sharedInstance
     let UIGenerator = PPNUIGenerator.sharedInstance
     var timerLabel : UILabel?
     var currentTime = 0
-//    var currentContinent = Int?
-//    let tableViewDelegate = SettingsViewControllerTableViewDelegate()
     
     required init(coder aDecoder: NSCoder) {
-        println("init view \(socket)")
-//        currentContinent = 
         var currentContinent = repositoryManager.currentAccount!.continent as Int
         selectedContinent = Continents.getContinent(currentContinent)
-//        println("continent \(Continents.getContinent(currentContinent))")
-        socket = SocketIOClient(socketURL: "http://rocky-spire-9621.herokuapp.com:80")
+        socket = SocketIOClient(socketURL: "http://poopin.herokuapp.com:80")
         super.init(coder: aDecoder)
     }
     
@@ -203,23 +217,16 @@ class PPNPoopinViewController : UIViewController {
         self.init(nibName: nil, bundle: nil)
     }
     
-    deinit {
-        println("deinit view")
-    }
-    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-//        getContinent()
         
         startingOffset = mainOffset
-        println(startingOffset)
         startAndRegisterSocket()
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         deregister()
-        println("deinit view")
         socket!.close()
         socket = nil
     }
@@ -242,7 +249,6 @@ class PPNPoopinViewController : UIViewController {
     
     func updateTime() {
         currentTime++
-        
         timerLabel?.text = formatTime(currentTime)
     }
     
@@ -263,13 +269,14 @@ class PPNPoopinViewController : UIViewController {
         return "\(minutesString):\(secondsString)"
     }
     
-//    
-    
     func update(newStats: Dictionary<String, Int>) {
         for (name, continentCell) in continentCells as [String: PPNContinentStatsCell] {
             continentCell.updateValuesAndReturnNewCell(newStats[name]!)
         }
-        println(liveStats)
+    }
+    
+    func updateTotal(total: Int) {
+        poopinStatLabel?.updateTotalLabel(total)
     }
     
     private func createLogoView() {
@@ -279,26 +286,7 @@ class PPNPoopinViewController : UIViewController {
     }
     
     func createMainPoopinStatLabel() {
-        var view = UIView()
-        view.frame = CGRectMake(0.0, 130.0, self.view.frame.maxX, 80.0)
-//        view.backgroundColor = UIColor.redColor()
-        
-        var mainTextLabel = UILabel(frame: CGRectMake(0.0, 5.0, self.view.frame.maxX, 40.0))
-        mainTextLabel.text = "200"
-        mainTextLabel.textAlignment = NSTextAlignment.Center
-        mainTextLabel.textColor = UIColor.whiteColor()
-        mainTextLabel.font = UIFont.boldSystemFontOfSize(40.0)
-        
-        var subTextLabel = UILabel(frame: CGRectMake(0.0, 40.0, self.view.frame.maxX, 35.0))
-        subTextLabel.text = "people are also poopin right now"
-        subTextLabel.textAlignment = NSTextAlignment.Center
-        subTextLabel.textColor = UIColor.whiteColor()
-        subTextLabel.font = UIFont.boldSystemFontOfSize(15.0)
-        
-        view.addSubview(mainTextLabel)
-        view.addSubview(subTextLabel)
-        
-        self.view.addSubview(view)
+        poopinStatLabel = PPNContinentStatLabel(parentView: self.view)
     }
     
     func createTimerLabel() {
@@ -334,33 +322,24 @@ class PPNPoopinViewController : UIViewController {
         socket!.connect()
         
         socket!.on("connect") {data in
-            println("socket connected")
             self.sendInitialMessage()
         }
         
         socket!.on("updatePoopinStats") {data in
-            println("CALLED")
-            
-//            var jerror = NSError()
-            
-//            let jsonDic = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &jerror) as Dictionary<String, AnyObject>
-            if let reason = data as? Dictionary<String, AnyObject> {
-                
-//                println("Data received \(reason)")
-                
-                if let continents = reason["continents"] as? Dictionary<String, Int> {
-                  println("CONTINENTS \(continents)")
+            if let result = data as? Dictionary<String, AnyObject> {
+                if let continents = result["continents"] as? Dictionary<String, Int> {
                     self.update(continents)
+                }
+                
+                if let total = result["total"] as? Int {
+                    self.updateTotal(total)
                 }
             }
         }
     }
     
-    func goToSettings(sender:UIButton!)
-    {
-        println("Button tapped")
+    func goToSettings(sender:UIButton!) {
         performSegueWithIdentifier("goToSettings2", sender: self)
-        
     }
     
     func sendInitialMessage() {
@@ -370,6 +349,4 @@ class PPNPoopinViewController : UIViewController {
     func deregister() {
         socket!.emit("disconnecting", ["continent" : selectedContinent!])
     }
-    
-    
 } 

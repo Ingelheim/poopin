@@ -1,7 +1,6 @@
 import UIKit
 
 class PPNContinentSelectionTableViewCell: UITableViewCell {
-//    var isHidden = true
     
     override func awakeFromNib() {
         super.awakeFromNib()
