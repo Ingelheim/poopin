@@ -7,25 +7,25 @@ class PPNUIGenerator {
     var logoNavBarFrame : CGRect?
     var sectionHeaderFrame : CGRect?
     
-    let screenSize: CGRect = UIScreen.mainScreen().bounds
+    var screenSize: CGRect = UIScreen.mainScreen().bounds
     
-    private let logoTextView : UILabel?
-    private let logoBackgroundView : UIView?
+    private var logoTextView : UILabel?
+    private var logoBackgroundView : UIView?
     
     var logoView : UIView?
     
-    private let sharedSpec : [String: AnyObject] =
+    private var sharedSpec : [String: AnyObject] =
     [
         "height" : CGFloat(100.0)
     ]
     
-    private let logoBackgroundSpec : [String: AnyObject] =
+    private var logoBackgroundSpec : [String: AnyObject] =
     [
         "backgroundColor" : UIColor(red: 0.02, green: 0.15, blue: 0.35, alpha: 1.0)
         
     ]
     
-    private let logoSpec : [String: AnyObject] =
+    private var logoSpec : [String: AnyObject] =
     [
         "text" : "poopin",
         "fontSize" : 40.0,
@@ -33,7 +33,7 @@ class PPNUIGenerator {
         
     ]
     
-    private let sectionHeaderSpec : [String: AnyObject] =
+    private var sectionHeaderSpec : [String: AnyObject] =
     [
         "backgroundColor" : UIColor(red: 0.02, green: 0.30, blue: 0.45, alpha: 1.0)
         
@@ -56,7 +56,7 @@ class PPNUIGenerator {
         maxX = CGFloat(screenSize.height)
         maxY = CGFloat(screenSize.width)
         
-        logoNavBarFrame = CGRect(x: 0.0, y: 0.0, width: maxY, height: sharedSpec["height"] as CGFloat)
+        logoNavBarFrame = CGRect(x: 0.0, y: 0.0, width: maxY, height: sharedSpec["height"] as! CGFloat)
         
         sectionHeaderFrame = CGRect(x: 0.0, y: 100.0, width: maxY, height: 30.0)
     }
@@ -71,7 +71,7 @@ class PPNUIGenerator {
         logoView?.addSubview(generateLogoText())
         
         if (showSettings) {
-            var testButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+            var testButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
             testButton.layer.borderWidth = 3
             testButton.layer.borderColor = UIColor.whiteColor().CGColor
             testButton.setTitle("Settings", forState: UIControlState.Normal)
@@ -84,9 +84,9 @@ class PPNUIGenerator {
     
     private func generateLogoText() -> UIView {
         var logoText = UILabel(frame: logoNavBarFrame!)
-        logoText.text = (logoSpec["text"] as String)
+        logoText.text = (logoSpec["text"] as! String)
         logoText.textAlignment = NSTextAlignment.Center
-        logoText.textColor = (logoSpec["textColor"] as UIColor)
+        logoText.textColor = (logoSpec["textColor"] as! UIColor)
         logoText.font = UIFont.boldSystemFontOfSize(40.0)
         
         return logoText
@@ -94,7 +94,7 @@ class PPNUIGenerator {
     
     private func generateLogoBackground() -> UIView {
         var logoBackground = UIView(frame: logoNavBarFrame!)
-        logoBackground.backgroundColor = (logoBackgroundSpec["backgroundColor"] as UIColor)
+        logoBackground.backgroundColor = (logoBackgroundSpec["backgroundColor"] as! UIColor)
         
         return logoBackground
     }

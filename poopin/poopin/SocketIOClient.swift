@@ -28,8 +28,8 @@ typealias NormalCallback = (AnyObject?) -> Void
 typealias MultipleCallback = (AnyObject...) -> Void
 
 class SocketIOClient: NSObject, SRWebSocketDelegate {
-    let socketURL:String!
-    private let secure:Bool!
+    var socketURL:String!
+    private var secure:Bool!
     private var handlers = [SocketEventHandler]()
     private var lastSocketMessage:SocketEvent?
     private var pingTimer:NSTimer!
@@ -53,7 +53,7 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
         }
         mutURL = mutURL["http://"] ~= ""
         mutURL = mutURL["https://"] ~= ""
-        self.socketURL = mutURL
+        self.socketURL = mutURL as String
         
         // Set options
         if opts != nil {
@@ -228,7 +228,7 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
         for g in 0..<arr.count {
             if arr[g] is NSData {
                 hasBinary = true
-                let sendData = self.createBinaryDataForSend(arr[g] as NSData)
+                let sendData = self.createBinaryDataForSend(arr[g] as! NSData)
                 
                 arrayDatas.append(sendData)
                 replacementArr[g] = ["_placeholder": true,
@@ -297,17 +297,17 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
                 hasBinary = true
                 let sendData = self.createBinaryDataForSend(binaryData)
                 returnDatas.append(sendData)
-                returnDict[key as String] = ["_placeholder": true, "num": placeholders++]
+                returnDict[key as! String] = ["_placeholder": true, "num": placeholders++]
             } else if let arr = value as? NSArray {
                 let (replace, hadBinary, arrDatas) = self.parseArray(arr, placeholders: placeholders)
                 
                 if hadBinary {
                     hasBinary = true
-                    returnDict[key as String] = replace
+                    returnDict[key as! String] = replace
                     placeholders += arrDatas.count
                     returnDatas.extend(arrDatas)
                 } else {
-                    returnDict[key as String] = arr
+                    returnDict[key as! String] = arr
                 }
             } else if let dict = value as? NSDictionary {
                 // Recursive
@@ -315,14 +315,14 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
                 
                 if hadBinary {
                     hasBinary = true
-                    returnDict[key as String] = nestDict
+                    returnDict[key as! String] = nestDict
                     placeholders += nestDatas.count
                     returnDatas.extend(nestDatas)
                 } else {
-                    returnDict[key as String] = dict
+                    returnDict[key as! String] = dict
                 }
             } else {
-                returnDict[key as String] = value
+                returnDict[key as! String] = value
             }
         }
         
@@ -349,7 +349,7 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
                 
                 if let json:AnyObject? = NSJSONSerialization.JSONObjectWithData(data,
                     options: nil, error: &jsonError) {
-                        self.startPingTimer(interval: (json!["pingInterval"] as Int) / 1000)
+                        self.startPingTimer(interval: (json!["pingInterval"] as! Int) / 1000)
                         return
                 }
             }
@@ -446,7 +446,7 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
                     let mutMessageObject = RegexMutable(binaryGroups[3])
                     let placeholdersRemoved = mutMessageObject["(\\{\"_placeholder\":true,\"num\":(\\d*)\\})"]
                         ~= "\"~~$2\""
-                    let mes = SocketEvent(event: event, args: placeholdersRemoved,
+                    let mes = SocketEvent(event: event as String, args: placeholdersRemoved,
                         placeholders: numberOfPlaceholders.integerValue)
                     self.lastSocketMessage = mes
                     return

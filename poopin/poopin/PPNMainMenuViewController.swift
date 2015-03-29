@@ -45,7 +45,7 @@ class PPNMainMenuViewController : UIViewController {
     }
     
     private func createSettingsButton() {
-        var testB = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+        var testB = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
         
         testB.frame = CGRectMake((self.view.frame.midX - 75.0), (self.view.frame.maxY - 45.0), 150.0, 35.0)
         testB.backgroundColor = UIColor.clearColor()

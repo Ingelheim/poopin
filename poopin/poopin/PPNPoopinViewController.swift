@@ -7,10 +7,10 @@ enum CELL_STATES : Int {
 }
 
 class PPNContinentStatsCellWhole : UIView {
-    let UIGenerator = PPNUIGenerator.sharedInstance
+    var UIGenerator = PPNUIGenerator.sharedInstance
     
     init(offset: Float) {
-        super.init()
+        super.init(frame: CGRectZero)
         self.frame = CGRectMake(0.0, CGFloat(offset), UIGenerator.maxY, 40.0)
     }
 
@@ -27,7 +27,7 @@ class PPNContinentStatsCellLeft : UILabel {
     let UIGenerator = PPNUIGenerator.sharedInstance
     
     init(continentName: String) {
-        super.init()
+        super.init(frame: CGRectZero)
         self.frame = CGRectMake(20.0, 0.0, ((UIGenerator.maxY * 0.6) - 20.0), 40.0)
         self.text = continentName
         self.textAlignment = NSTextAlignment.Left
@@ -48,7 +48,7 @@ class PPNContinentStatsCellRight : UILabel {
     let UIGenerator = PPNUIGenerator.sharedInstance
     
     init(poopValue: Int, state: CELL_STATES) {
-        super.init()
+        super.init(frame: CGRectZero)
         self.frame = CGRectMake(((UIGenerator.maxY * 0.6) - 20.0), 0.0, ((UIGenerator.maxY * 0.4) - 20.0), 40.0)
         self.text = String(poopValue)
         self.textAlignment = NSTextAlignment.Right
@@ -199,7 +199,7 @@ class PPNPoopinViewController : UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
-    convenience override init() {
+    convenience init() {
         self.init(nibName: nil, bundle: nil)
     }
     
@@ -232,14 +232,10 @@ class PPNPoopinViewController : UIViewController {
         createTimerLabel()
         
         for (name, continentCell) in continentCells as [String: PPNContinentStatsCell] {
-//            createContinentCell(continent as String, poopValue: poopValue as Int)
             self.view.addSubview(continentCell.wholeCell!)
         }
         
         createSettingsButton()
-        
-        
-//        var timer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("update"), userInfo: nil, repeats: true);
         
         var watchTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true);
     }
@@ -270,19 +266,8 @@ class PPNPoopinViewController : UIViewController {
 //    
     
     func update(newStats: Dictionary<String, Int>) {
-//        var liveStats = newStats as Dictionary<String, AnyObject>
-        
-        
-        
         for (name, continentCell) in continentCells as [String: PPNContinentStatsCell] {
-            //            createContinentCell(continent as String, poopValue: poopValue as Int)
-//            var randomInt = Int(arc4random_uniform(UInt32(4000))) + 1
-            
-//            var number = Int(liveStats["continents"]![name]!)
-            
-//            println(newStats.objectForKey(name))
             continentCell.updateValuesAndReturnNewCell(newStats[name]!)
-            //            self.view.addSubview(continentCell.wholeCell!)
         }
         println(liveStats)
     }
@@ -327,7 +312,7 @@ class PPNPoopinViewController : UIViewController {
     }
     
     private func createSettingsButton() {
-        var testB = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+        var testB = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
         
         testB.frame = CGRectMake((self.view.frame.midX - 100.0), (self.view.frame.maxY - 45.0), 200.0, 35.0)
         testB.backgroundColor = UIColor.clearColor()
@@ -367,10 +352,6 @@ class PPNPoopinViewController : UIViewController {
                   println("CONTINENTS \(continents)")
                     self.update(continents)
                 }
-////                var dic = reason as [String:String]
-//                self.update(reason)
-//
-//                //                self.label!.text = reason["test"] as? String
             }
         }
     }
@@ -391,4 +372,4 @@ class PPNPoopinViewController : UIViewController {
     }
     
     
-}
+} 

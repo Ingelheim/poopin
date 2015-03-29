@@ -56,7 +56,7 @@ class SettingsViewControllerTableViewDelegate: NSObject, UITableViewDelegate, UI
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("continentCell", forIndexPath: indexPath) as PPNContinentSelectionTableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("continentCell", forIndexPath: indexPath) as! PPNContinentSelectionTableViewCell
         
         cell.textLabel?.text = continents[indexPath.row].name
         
@@ -70,7 +70,7 @@ class SettingsViewControllerTableViewDelegate: NSObject, UITableViewDelegate, UI
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var cell = tableView.cellForRowAtIndexPath(indexPath) as PPNContinentSelectionTableViewCell
+        var cell = tableView.cellForRowAtIndexPath(indexPath) as! PPNContinentSelectionTableViewCell
         currentContinent = indexPath.row
         tableView.reloadData()
     }

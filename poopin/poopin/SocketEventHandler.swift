@@ -23,9 +23,9 @@
 //  THE SOFTWARE.
 
 class SocketEventHandler {
-    let event:String!
-    let callback:NormalCallback!
-    let callbackMult:MultipleCallback!
+    var event:String!
+    var callback:NormalCallback!
+    var callbackMult:MultipleCallback!
     
     init(event:String, callback:NormalCallback) {
         self.event = event
