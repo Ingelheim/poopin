@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.window?.backgroundColor = UIColor(red: 0.02, green: 0.15, blue: 0.35, alpha: 1.0)
         
-        UILabel.appearance().font = UIFont(name: "Lato-Regular", size: 20.0)
+//        UILabel.appearance().font = UIFont(name: "Lato-Regular", size: 20.0)
         UIButton.appearance().titleLabel?.font = UIFont(name: "Lato-Regular", size: 20.0)
     }
 

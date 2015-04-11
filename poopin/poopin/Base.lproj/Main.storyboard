@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7525" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="B31-jE-l98">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7525" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="pcj-wf-O57">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7516"/>
     </dependencies>
@@ -19,6 +19,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gg-We-SU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="241" y="925"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KbC-KJ-5at">
+            <objects>
+                <navigationController id="pcj-wf-O57" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nc6-l3-V9O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zIt-a1-0SV" kind="relationship" relationship="rootViewController" id="UqR-ec-XBr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4zd-eO-RZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-299" y="1723"/>
+        </scene>
+        <!--Main Poop View-->
+        <scene sceneID="Qk9-v6-vAt">
+            <objects>
+                <viewController id="zIt-a1-0SV" customClass="MainPoopView" customModule="poopin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xOl-Jz-Oen">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="clock" id="lAw-4e-PhU"/>
+                    <navigationItem key="navigationItem" id="Jm5-MY-GFy"/>
+                    <connections>
+                        <segue destination="YQd-zw-0DF" kind="push" id="Ihq-iM-vhA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0CZ-NB-zm0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="241" y="1555"/>
+        </scene>
+        <!--Stats View-->
+        <scene sceneID="uN2-Px-kUi">
+            <objects>
+                <viewController id="YQd-zw-0DF" customClass="StatsView" customModule="poopin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pB7-HC-Ikf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="cog" id="Wlb-bt-6cv"/>
+                    <navigationItem key="navigationItem" id="yfF-Ah-JL5"/>
+                    <connections>
+                        <segue destination="Pw6-dd-2CB" kind="push" id="tGo-dg-7WH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DQs-Sa-BkO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="680" y="1555"/>
+        </scene>
+        <!--Poop View-->
+        <scene sceneID="GoG-5h-1QX">
+            <objects>
+                <viewController id="Pw6-dd-2CB" customClass="PoopView" customModule="poopin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="utP-E0-RAu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jFK-uh-sTa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6h1-lV-6kz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1067" y="1557"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="V0N-o1-OGn">
@@ -78,22 +147,9 @@
             </objects>
             <point key="canvasLocation" x="1552" y="925"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="ssx-lI-4G5">
-            <objects>
-                <viewController id="3ie-OZ-yTc" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="74q-JQ-Rms">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TKY-Uo-jBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2241" y="231"/>
-        </scene>
     </scenes>
     <resources>
+        <image name="clock" width="33" height="33"/>
         <image name="cog" width="33" height="33"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

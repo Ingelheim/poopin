@@ -34,6 +34,10 @@
 		80149AD01AC8A64300535007 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80149ABE1AC8A64300535007 /* Lato-Thin.ttf */; };
 		80149AD11AC8A64300535007 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80149ABF1AC8A64300535007 /* Lato-ThinItalic.ttf */; };
 		805F72711A7C4EE100F5243A /* PPNUIGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A253121A7C307000F2B992 /* PPNUIGenerator.swift */; };
+		807CFA921AD96AE100728E17 /* MainPoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CFA911AD96AE100728E17 /* MainPoopView.swift */; };
+		807CFA941AD9812F00728E17 /* PoopParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CFA931AD9812F00728E17 /* PoopParent.swift */; };
+		807CFA961AD981E700728E17 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CFA951AD981E700728E17 /* StatsView.swift */; };
+		807CFA981AD98E8700728E17 /* PoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CFA971AD98E8700728E17 /* PoopView.swift */; };
 		80A253131A7C307000F2B992 /* PPNUIGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A253121A7C307000F2B992 /* PPNUIGenerator.swift */; };
 		80A253161A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */; };
 		80A253171A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */; };
@@ -46,12 +50,12 @@
 		80B166081A7C03030000EE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B166071A7C03030000EE25 /* AppDelegate.swift */; };
 		80B1660B1A7C03030000EE25 /* poopin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80B166091A7C03030000EE25 /* poopin.xcdatamodeld */; };
 		80B1660D1A7C03030000EE25 /* PPNSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1660C1A7C03030000EE25 /* PPNSettingsViewController.swift */; };
-		80B166101A7C03030000EE25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B1660E1A7C03030000EE25 /* Main.storyboard */; };
 		80B166121A7C03030000EE25 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80B166111A7C03030000EE25 /* Images.xcassets */; };
 		80B166151A7C03030000EE25 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B166131A7C03030000EE25 /* LaunchScreen.xib */; };
 		80B166211A7C03030000EE25 /* poopinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B166201A7C03030000EE25 /* poopinTests.swift */; };
 		80B166311A7C0E3A0000EE25 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B166301A7C0E3A0000EE25 /* Account.swift */; };
 		80B166351A7C13D90000EE25 /* PPNRepositoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B166341A7C13D90000EE25 /* PPNRepositoryManager.swift */; };
+		80D3F5011AD9B21400233A45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80D3F4FF1AD9B21400233A45 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +95,10 @@
 		80149ABD1AC8A64300535007 /* Lato-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		80149ABE1AC8A64300535007 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
 		80149ABF1AC8A64300535007 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
+		807CFA911AD96AE100728E17 /* MainPoopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPoopView.swift; sourceTree = "<group>"; };
+		807CFA931AD9812F00728E17 /* PoopParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoopParent.swift; sourceTree = "<group>"; };
+		807CFA951AD981E700728E17 /* StatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		807CFA971AD98E8700728E17 /* PoopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoopView.swift; sourceTree = "<group>"; };
 		80A253121A7C307000F2B992 /* PPNUIGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNUIGenerator.swift; sourceTree = "<group>"; };
 		80A253141A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPNContinentSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		80A253151A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPNContinentSelectionTableViewCell.xib; sourceTree = "<group>"; };
@@ -106,7 +114,6 @@
 		80B166071A7C03030000EE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80B1660A1A7C03030000EE25 /* poopin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = poopin.xcdatamodel; sourceTree = "<group>"; };
 		80B1660C1A7C03030000EE25 /* PPNSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPNSettingsViewController.swift; sourceTree = "<group>"; };
-		80B1660F1A7C03030000EE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80B166111A7C03030000EE25 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		80B166141A7C03030000EE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		80B1661A1A7C03030000EE25 /* poopinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = poopinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +121,7 @@
 		80B166201A7C03030000EE25 /* poopinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poopinTests.swift; sourceTree = "<group>"; };
 		80B166301A7C0E3A0000EE25 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		80B166341A7C13D90000EE25 /* PPNRepositoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPNRepositoryManager.swift; path = poopin/PPNRepositoryManager.swift; sourceTree = SOURCE_ROOT; };
+		80D3F5001AD9B21400233A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +289,7 @@
 		80B166041A7C03030000EE25 /* poopin */ = {
 			isa = PBXGroup;
 			children = (
+				80D3F4FF1AD9B21400233A45 /* Main.storyboard */,
 				80149AAD1AC8A5EF00535007 /* Fonts */,
 				8007E4201A7E727B00DDA472 /* SwiftIO */,
 				80A85DA11A7E5624002C8951 /* SocketRocket */,
@@ -289,8 +298,11 @@
 				80A766261A7D431000F0672F /* Persistence */,
 				80A766241A7D42F400F0672F /* Views */,
 				80B166071A7C03030000EE25 /* AppDelegate.swift */,
-				80B1660E1A7C03030000EE25 /* Main.storyboard */,
 				80B166051A7C03030000EE25 /* Supporting Files */,
+				807CFA911AD96AE100728E17 /* MainPoopView.swift */,
+				807CFA931AD9812F00728E17 /* PoopParent.swift */,
+				807CFA951AD981E700728E17 /* StatsView.swift */,
+				807CFA971AD98E8700728E17 /* PoopView.swift */,
 			);
 			path = poopin;
 			sourceTree = "<group>";
@@ -407,8 +419,8 @@
 				80A253181A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.xib in Resources */,
 				80149AC81AC8A64300535007 /* Lato-Italic.ttf in Resources */,
 				80149AC51AC8A64300535007 /* Lato-HairlineItalic.ttf in Resources */,
+				80D3F5011AD9B21400233A45 /* Main.storyboard in Resources */,
 				80149ACF1AC8A64300535007 /* Lato-SemiboldItalic.ttf in Resources */,
-				80B166101A7C03030000EE25 /* Main.storyboard in Resources */,
 				80149AD11AC8A64300535007 /* Lato-ThinItalic.ttf in Resources */,
 				80149ACC1AC8A64300535007 /* Lato-MediumItalic.ttf in Resources */,
 				80149AC71AC8A64300535007 /* Lato-HeavyItalic.ttf in Resources */,
@@ -450,11 +462,15 @@
 				8007E4261A7E72B200DDA472 /* SocketEventHandler.swift in Sources */,
 				80B166081A7C03030000EE25 /* AppDelegate.swift in Sources */,
 				8007E4251A7E72B200DDA472 /* SocketEvent.swift in Sources */,
+				807CFA961AD981E700728E17 /* StatsView.swift in Sources */,
 				80A253131A7C307000F2B992 /* PPNUIGenerator.swift in Sources */,
 				80A85DA61A7E563B002C8951 /* SRWebSocket.m in Sources */,
+				807CFA941AD9812F00728E17 /* PoopParent.swift in Sources */,
 				80B166351A7C13D90000EE25 /* PPNRepositoryManager.swift in Sources */,
+				807CFA921AD96AE100728E17 /* MainPoopView.swift in Sources */,
 				80A253161A7C3ACF00F2B992 /* PPNContinentSelectionTableViewCell.swift in Sources */,
 				80A2531B1A7C3E7500F2B992 /* PPNSettingsViewControllerTableViewDelegate.swift in Sources */,
+				807CFA981AD98E8700728E17 /* PoopView.swift in Sources */,
 				80A7662D1A7D449400F0672F /* PPNPoopinViewController.swift in Sources */,
 				80A766221A7D1B8200F0672F /* PPNMainMenuViewController.swift in Sources */,
 			);
@@ -481,20 +497,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		80B1660E1A7C03030000EE25 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				80B1660F1A7C03030000EE25 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		80B166131A7C03030000EE25 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				80B166141A7C03030000EE25 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		80D3F4FF1AD9B21400233A45 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80D3F5001AD9B21400233A45 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
