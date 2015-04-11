@@ -56,11 +56,13 @@ class StatsViewWrapper : UIImageView {
 }
 
 class StatsView : PoopParent {
+    var backImageView : UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addOwnStatsWrapper()
         addOtherStatsWrapper()
+        createBackImageView()
     }
     
     func addOwnStatsWrapper() {
@@ -70,6 +72,19 @@ class StatsView : PoopParent {
         
         
         self.view.addSubview(ownStatsWrapper)
+    }
+    
+    func createBackImageView() {
+        backImageView = UIImageView(image: UIImage(named: "back"))
+        backImageView!.frame = CGRectMake(20, 30, 30, 30)
+        backImageView!.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("goBackToMainView")))
+        backImageView!.userInteractionEnabled = true
+        
+        self.view.addSubview(backImageView!)
+    }
+    
+    func goBackToMainView() {
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
     func addOtherStatsWrapper() {

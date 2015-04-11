@@ -7,7 +7,9 @@ class MainPoopView : PoopParent {
     override func viewDidLoad() {
         super.viewDidLoad()
         createInfoView()
+        createStatisticsView()
         createPoopinButton()
+        createFlagView()
         addDidYouKnow()
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
@@ -22,9 +24,37 @@ class MainPoopView : PoopParent {
     
     func createPoopinButton() {
         var poopinButton = UIImageView(image: UIImage(named: "poopin"))
-        poopinButton.frame = CGRectMake(self.view.frame.midX - 104, self.view.frame.maxY - 135, 208, 57)
+        poopinButton.frame = CGRectMake(self.view.frame.midX - 104, self.view.frame.maxY - 110, 208, 57)
+        poopinButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("startPoopin")))
+        poopinButton.userInteractionEnabled = true
         
         self.view.addSubview(poopinButton)
+    }
+    
+    func createFlagView() {
+        flagImageView = UIImageView(image: UIImage(named: "flag-empty"))
+        flagImageView!.frame = CGRectMake(30, 30, 25, 30)
+        flagImageView!.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("slide")))
+        flagImageView!.userInteractionEnabled = true
+        
+        self.view.addSubview(flagImageView!)
+    }
+    
+    func createStatisticsView() {
+        statisticsImageView = UIImageView(image: UIImage(named: "line-chart"))
+        statisticsImageView!.frame = CGRectMake(self.view.frame.maxX - 60, 30, 30, 30)
+        statisticsImageView!.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("goToStatistics")))
+        statisticsImageView!.userInteractionEnabled = true
+        
+        self.view.addSubview(statisticsImageView!)
+    }
+    
+    func startPoopin() {
+        performSegueWithIdentifier("startPoopin", sender: self)
+    }
+    
+    func goToStatistics() {
+        performSegueWithIdentifier("goToStatistics", sender: self)
     }
     
     func addDidYouKnow() {

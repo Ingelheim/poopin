@@ -36,13 +36,17 @@ class PoopParent : UIViewController {
     var mainView : MainView?
     var expanded = false
     var flagImageView : UIImageView?
+    var statisticsImageView : UIImageView?
     var overlayView : UIView?
     
     override func viewDidLoad() {
         createLogo()
         createContinentLabels()
         createMainView()
-        createFlagView()
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
     
     func createLogo() {
@@ -62,15 +66,6 @@ class PoopParent : UIViewController {
         mainView!.backgroundColor = UIColor(red: 0.192, green: 0.443, blue: 0.737, alpha: 1.0)
         
         self.view.addSubview(mainView!)
-    }
-    
-    func createFlagView() {
-        flagImageView = UIImageView(image: UIImage(named: "flag-empty"))
-        flagImageView!.frame = CGRectMake(30, 30, 25, 30)
-        flagImageView!.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("slide")))
-        flagImageView!.userInteractionEnabled = true
-        
-        self.view.addSubview(flagImageView!)
     }
     
     func createContinentName(frame: CGRect, name: String) -> ContinentPoopinName {

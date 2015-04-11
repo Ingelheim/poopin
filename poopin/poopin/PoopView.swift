@@ -108,8 +108,14 @@ class PoopView : PoopParent {
     func createDoneButton() {
         var doneButton = UIImageView(image: UIImage(named: "done"))
         doneButton.frame = CGRectMake(self.view.frame.midX - 104, self.view.frame.maxY - 110, 208, 57)
+        doneButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("donePoopin")))
+        doneButton.userInteractionEnabled = true
         
         self.view.addSubview(doneButton)
+    }
+    
+    func donePoopin() {
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
     func createMainPoopinLabel() {
